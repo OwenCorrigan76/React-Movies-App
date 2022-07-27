@@ -1,4 +1,4 @@
-# moviesapp-ci-2021
+# ICT Skill2 Assignment based on Movies App
 
 
 
