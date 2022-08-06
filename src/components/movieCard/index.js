@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React, { useContext } from "react";
-=======
-import React, { useContext  } from "react";
-import Avatar from "@material-ui/core/Avatar" // new import
-import { Link } from "react-router-dom";  // new import to make 'more info' button dynamic
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -16,20 +10,12 @@ import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
-<<<<<<< HEAD
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import { MoviesContext } from "../../contexts/moviesContext";
 
 const useStyles = makeStyles({
-=======
-import IconButton from "@material-ui/core/IconButton";
-import Grid from "@material-ui/core/Grid";
-import { MoviesContext } from "../../contexts/moviesContext";
-
-const useStyles = makeStyles({  // hook function
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
   card: { maxWidth: 345 },
   media: { height: 500 },
   avatar: {
@@ -39,18 +25,11 @@ const useStyles = makeStyles({  // hook function
 
 export default function MovieCard({ movie, action }) {
   const classes = useStyles();
-<<<<<<< HEAD
   const { favourites } = useContext(MoviesContext);
-=======
-  const { favourites} = useContext(MoviesContext);
-  const { mustWatch } = useContext(MoviesContext);
-
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
 
   if (favourites.find((id) => id === movie.id)) {
     movie.favourite = true;
   } else {
-<<<<<<< HEAD
     movie.favourite = false;
   }
 
@@ -73,40 +52,6 @@ export default function MovieCard({ movie, action }) {
           </Typography>
         }
       />{" "}
-=======
-    movie.favourite = false
-  }
-
-  
-  if (mustWatch.find((id) => id === movie.id)) {
-    movie.mustWatchMovie = true;
-  } else {
-    movie.mustWatchMovie = false
-  }
-
-const handleAddToFavourite = (e) => {
-    e.preventDefault();
-    // addToFavourites(movie);
-  };
-
-  return (
-    <Card className={classes.card}>
-     <CardHeader
-      className={classes.header}
-      avatar={
-        movie.favourite ? (
-          <Avatar className={classes.avatar}>
-            <FavoriteIcon />
-          </Avatar>
-        ) : null
-      }
-      title={
-        <Typography variant="h5" component="p">
-          {movie.title}{" "}
-        </Typography>
-      }
-    />
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
       <CardMedia
         className={classes.media}
         image={

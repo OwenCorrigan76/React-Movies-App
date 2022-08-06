@@ -7,15 +7,9 @@ import Box from "@material-ui/core/Box";
 import { useForm } from "react-hook-form";
 import { MoviesContext } from "../../contexts/moviesContext";
 import MenuItem from "@material-ui/core/MenuItem";
-<<<<<<< HEAD
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import { useNavigate } from "react-router-dom";
-=======
-import Snackbar from "@material-ui/core/Snackbar"; 
-import MuiAlert from "@material-ui/lab/Alert";
-import {useNavigate} from 'react-router-dom'
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
 
 const ratings = [
   {
@@ -60,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   snack: {
-<<<<<<< HEAD
     width: "50%",
     "& > * ": {
       width: "100%",
@@ -93,40 +86,6 @@ const ReviewForm = ({ movie }) => {
     setOpen(true); // NEW
   };
 
-=======
-     width: "50%",
-     "& > * ": {
-       width: "100%",
-     },
-   },
-}));
-
-const ReviewForm = ({ movie }) => {
-    const classes = useStyles();
-    const { register, handleSubmit, errors, reset } = useForm();
-    const context = useContext(MoviesContext);
-    const [rating, setRating] = useState(3);
-    const [open, setOpen] = useState(false);  //NEW
-    const navigate = useNavigate()          
-  
-    const handleRatingChange = (event) => {
-      setRating(event.target.value);
-    };
-  
-    const handleSnackClose = (event) => {     
-      setOpen(false);
-      navigate("/movies/favourites");
-    };
-  
-    const onSubmit = (review) => {
-        review.movieId = movie.id;
-        review.rating = rating;
-        // console.log(review);
-        context.addReview(movie, review);
-        setOpen(true);   // NEW
-      };
-      
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
   return (
     <Box component="div" className={classes.root}>
       <Typography component="h2" variant="h3">
@@ -235,8 +194,4 @@ const ReviewForm = ({ movie }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ReviewForm;
-=======
-export default ReviewForm;
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218

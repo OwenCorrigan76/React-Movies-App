@@ -30,13 +30,7 @@ const FavouriteMoviesPage = () => {
     q.data.genre_ids = q.data.genres.map((g) => g.id);
     return q.data;
   });
-<<<<<<< HEAD
   
-=======
-
-  const toDo = () => true;
-
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
   return (
     <PageTemplate
       title="Favourite Movies"
