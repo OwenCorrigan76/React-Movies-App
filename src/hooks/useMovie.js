@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react";
 import {getMovie} from '../api/tmdb-api'
 
 const useMovie = id => {
@@ -11,4 +11,4 @@ const useMovie = id => {
   return [movie, setMovie];
 };
 
-export default useMovie
+export default useMovie */

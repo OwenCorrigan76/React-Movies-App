@@ -1,4 +1,4 @@
-// most important
+// used for add to / removez favourites
 
 import React, { useState } from "react";
 
@@ -10,7 +10,7 @@ const MoviesContextProvider = (props) => {
   const [favourites, setFavourites] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
   const [top_rated, setTopRated] = useState([]);
-  const [tvShow, setTvShow] = useState([]);
+  const [tvShows, setTvShow] = useState([]);
 
   const addToFavourites = (movie) => {
     if (!favourites.includes(movie.id)) {
@@ -36,9 +36,9 @@ const MoviesContextProvider = (props) => {
     }
   };
 
-  const addTvShow = (movie) => {
-    if (!top_rated.includes(movie.id)) {
-      let newTvshow = [...tvShow, movie.id];
+  const addTvShow = (tv) => {
+    if (!top_rated.includes(tv.id)) {
+      let newTvshow = [...tvShows, tv.id];
       setTvShow(newTvshow);
     }
   };
@@ -55,20 +55,20 @@ const MoviesContextProvider = (props) => {
   };
   return (
     <MoviesContext.Provider
-      value={{
+       value={{
         favourites,
         addToFavourites,
         removeFromFavourites,
-        upcoming,
-        addToUpcoming,
-        top_rated,
-        addToTopRated,
-        addReview,
-        mustWatch,
-        addToMustWatch,
-        tvShow,
-        addTvShow,
-      }}
+       // upcoming,
+       // addToUpcoming,
+       // top_rated,
+       // addToTopRated,
+       // addReview,
+       // mustWatch,
+       // addToMustWatch,
+       // tvShows,
+       // addTvShow,
+      }} 
     >
       {props.children}
     </MoviesContext.Provider>

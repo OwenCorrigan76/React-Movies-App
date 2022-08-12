@@ -72,7 +72,7 @@ const SiteHeader = () => {
             TMDB Client
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            Owen Corrigan Move App!
+            Owen Corrigan Movie App!
           </Typography>
           {isMobile ? (
             <>

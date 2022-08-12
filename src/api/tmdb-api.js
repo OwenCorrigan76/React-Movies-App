@@ -48,7 +48,6 @@ export const getGenres = async () => {
     });
 };
 
-
 export const getMovieImages = ({ queryKey }) => {
   const [, idPart] = queryKey;
   const { id } = idPart;
@@ -107,7 +106,6 @@ export const getMovieReviews = (id) => {
     });
 };
 
-  
 export const getTvShows = async () => {
   return fetch(
     "https://api.themoviedb.org/3/discover/tv?api_key=" +
@@ -162,8 +160,8 @@ export const getTvImages = ({ queryKey }) => {
 export const getActorImages = ({ queryKey }) => {
   const [, idPart] = queryKey;
   const { id } = idPart;
-  console.log('queryKey:', queryKey);
-  console.log('id:', id);
+  console.log("queryKey:", queryKey);
+  console.log("id:", id);
   return fetch(
     `https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
   )
