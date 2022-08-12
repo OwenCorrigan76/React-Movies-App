@@ -7,9 +7,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-/* import FavoriteIcon from "@material-ui/icons/Favorite";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
-import StarRateIcon from "@material-ui/icons/StarRate"; */
+import StarRateIcon from "@material-ui/icons/StarRate";
 import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
@@ -17,20 +17,22 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
-    backgroundColor: 'white',
-    color: 'black',
+    backgroundColor: "white",
+    color: "black",
   },
   media: { height: 500 },
 });
+
 export default function TvCard({ tv, action }) {
   const classes = useStyles();
-  
 
   return (
     <Card className={classes.card}>
-      <CardHeader className={classes.header}  title={
-          <Typography variant='h5' component='p'>
-            {tv.name}{' '}
+      <CardHeader
+        className={classes.header}
+        title={
+          <Typography variant="h5" component="p">
+            {tv.name}{" "}
           </Typography>
         }
         style={{ height: 70 }}
@@ -38,25 +40,24 @@ export default function TvCard({ tv, action }) {
       <CardMedia
         className={classes.media}
         image={
-            tv.poster_path
+          tv.poster_path
             ? `https://image.tmdb.org/t/p/w500/${tv.poster_path}`
             : `${process.env.PUBLIC_URL}/assets/film-poster-placeholder.png`
         }
-
       />
-     <CardContent>
+      <CardContent>
         <Grid container>
           <Grid item xs={6}>
-            <Typography variant='h6' component='p'>
-              <StarRate fontSize='medium' />
-              {' Popularity '} {tv.popularity}
+            <Typography variant="h6" component="p">
+              <StarRateIcon fontSize="medium" />
+              {" Popularity "} {tv.popularity}
             </Typography>
           </Grid>
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
         <Link to={`/tvShows/${tv.id}`}>
-          <Button variant='contained' size='medium' color='primary'>
+          <Button variant="contained" size="medium" color="primary">
             TV Show Info
           </Button>
         </Link>

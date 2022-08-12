@@ -1,7 +1,7 @@
-// this is for the layout of the movie info page
+// this is for the layout of the tv info page
 
 import React from "react";
-// import TvHeader from "../headerTv"; may not need
+import TvHeader from "../headerTv";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";

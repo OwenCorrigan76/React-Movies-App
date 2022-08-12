@@ -8,7 +8,7 @@ const TvList = ({ tvShows, action }) => {
       <Tv key={t.id} tv={t} action={action} />
     </Grid>
   ));
-  return tvCards;
+    return tvCards;
 };
 
 export default TvList;

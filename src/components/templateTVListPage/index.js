@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Header from "../headerTVShowList";
+import Header from "../headerMovieList";
+import FilterCard from "../filterTvShowsCard";
 import Grid from "@material-ui/core/Grid";
 import Fab from "@material-ui/core/Fab";
+import Drawer from "@material-ui/core/Drawer";
 import { makeStyles } from "@material-ui/core/styles";
 import TvList from "../tvList";
 
@@ -19,26 +21,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function TVListPageTemplate({ tvShows, title, action }) {
+function TvListPageTemplate({ tvShows, title, action }) {
   const classes = useStyles();
-  /*  const [titleFilter, setTitleFilter] = useState('');
-   const [genreFilter, setGenreFilter] = useState('0');
-   const [drawerOpen, setDrawerOpen] = useState(false); */
+  const [titleFilter, setTitleFilter] = useState("");
+  const [genreFilter, setGenreFilter] = useState("0");
+  const [drawerOpen, setDrawerOpen] = useState(false);
   // come back to above if I decide to use tv filter
 
- //  const genreId = Number(genreFilter);
+  const genreId = Number(genreFilter);
 
-  let displayedTVShows = tvShows
-   /*  .filter((m) => {
-      return m.title.toLowerCase().search(titleFilter.toLowerCase()) !== -1;
-    })
-    .filter((m) => {
-      return genreId > 0 ? m.genre_ids.includes(genreId) : true;
-    }); */
- /*  const handleChange = (type, value) => {
-    if (type === "title") setTitleFilter(value);
+  let displayedTvShows = tvShows
+    .filter((t) => {
+      return t.name.toLowerCase().search(titleFilter.toLowerCase()) !== -1;
+    }) 
+        .filter((t) => {
+      return genreId > 0 ? t.genre_ids.includes(genreId) : true;
+    });
+  const handleChange = (type, value) => {
+    if (type === "name") setTitleFilter(value);
     else setGenreFilter(value);
-  }; */
+  };
   return (
     <>
       <Grid container className={classes.root}>
@@ -55,20 +57,20 @@ function TVListPageTemplate({ tvShows, title, action }) {
         onClick={() => setDrawerOpen(true)}
         className={classes.fab}
       >
-        Filter
+      Filter
       </Fab>
-    {/*   <Drawer
+      <Drawer
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-        <FilterCard
+      {   <FilterCard
           onUserInput={handleChange}
           titleFilter={titleFilter}
           genreFilter={genreFilter}
-        />
-      </Drawer> */}
+        /> } 
+      </Drawer>
     </>
   );
 }
-export default TVListPageTemplate;
+export default TvListPageTemplate;

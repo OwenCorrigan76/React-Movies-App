@@ -1,4 +1,4 @@
-import React, {useState, useEffect}  from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,6 +9,9 @@ import TextField from "@material-ui/core/TextField";
 import SearchIcon from "@material-ui/icons/Search";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import { getGenres } from "../../api/tmdb-api"; // import getGenres from api
+import { useQuery } from "react-query";
+import Spinner from "../spinner";
 
 const useStyles = makeStyles((theme) => ({ // css
   root: {
@@ -59,7 +62,7 @@ export default function FilterTvShowsCard(props) {
             <SearchIcon fontSize="large" />
             Filter the shows.
           </Typography>
-          <TextField /* refactored */
+          <TextField  refactored 
             className={classes.formControl}
             id="filled-search"
             label="Search field"
@@ -70,7 +73,7 @@ export default function FilterTvShowsCard(props) {
           />
           <FormControl className={classes.formControl}>
             <InputLabel id="genre-label">Genre</InputLabel>
-            <Select /*  also refactored */
+            <Select 
               labelId="genre-label"
               id="genre-select"
               value={props.genreFilter}

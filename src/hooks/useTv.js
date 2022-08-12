@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react";
 import {getTvShows} from '../api/tmdb-api'
 
 const useTv = id => {
@@ -11,4 +11,4 @@ const useTv = id => {
   return [tv, setTv];
 };
 
-export default useTv
+export default useTv */
