@@ -1,18 +1,22 @@
+// entry point to app
+
 import SiteHeader from "./components/siteHeader";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
+import PopularActorsPage from './pages/popularActorsPage';
+import ActorsPage from './pages/actorDetailsPage';
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage"; // NEW
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage"; // NEW
-import VideoPage from "./pages/videoPage.js"; // NEW
 import MovieReviewPage from "./pages/movieReviewPage";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from "./pages/addMovieReviewPage";
+import TvHomePage from "./pages/tvPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,11 +40,14 @@ const App = () => {
             />
             <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
             <Route path="/movies/top_rated" element={<TopRatedMoviesPage />} />
-            <Route path="/movies/video" element={<VideoPage />} />
             <Route path="/reviews/form" element={<AddMovieReviewPage />} />
             <Route path="/movies/:id" element={<MoviePage />} />
+            <Route path="/actors/:id" element={<ActorsPage />} />
+            <Route path='/person/popular' element={<PopularActorsPage />} />
+            <Route path="/discover/tv" element={<TvHomePage />} />
             <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+{/*             <Route path="/tvShows/:id" element={<TvHomePage />} />
+ */}            <Route path="*" element={<Navigate to="/" replace />} />
             <Route path="/reviews/:id" element={<MovieReviewPage />} />
           </Routes>
         </MoviesContextProvider>

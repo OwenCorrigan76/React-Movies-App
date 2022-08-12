@@ -1,3 +1,5 @@
+// this is the header under navigation, turned orange
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
@@ -13,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexWrap: "wrap",
     marginBottom: theme.spacing(1.5),
+    backgroundColor: "rgb(255, 95, 0)",
+
   },
 }));
 

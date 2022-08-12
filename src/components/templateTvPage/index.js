@@ -1,12 +1,12 @@
 // this is for the layout of the movie info page
 
 import React from "react";
-import MovieHeader from "../headerMovie";
+// import TvHeader from "../headerTv"; may not need
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
-import { getMovieImages } from "../../api/tmdb-api";
+import { getTvImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from "../spinner";
 
@@ -19,20 +19,18 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    
   },
   imageList: {
     width: 450,
     height: "100vh",
-    
   },
 }));
 
-const TemplateMoviePage = ({ movie, children }) => {
+const TemplateTvPage = ({ tv, children }) => {
   const classes = useStyles();
   const { data, error, isLoading, isError } = useQuery(
-    ["images", { id: movie.id }],
-    getMovieImages
+    ["images", { id: tv.id }],
+    getTvImages
   );
 
   if (isLoading) {
@@ -47,7 +45,7 @@ const TemplateMoviePage = ({ movie, children }) => {
   return (
     <>
       <div className={classes.root}>
-        <MovieHeader movie={movie} />
+        <TvHeader tv={tv} />
         <Grid container spacing={5} style={{ padding: "15px" }}>
           <Grid item xs={2}>
             <div className={classes.imageListRoot}>
@@ -63,7 +61,6 @@ const TemplateMoviePage = ({ movie, children }) => {
               </ImageList>
             </div>
           </Grid>
-
           <Grid item xs={9}>
             {children}
           </Grid>
@@ -73,4 +70,4 @@ const TemplateMoviePage = ({ movie, children }) => {
   );
 };
 
-export default TemplateMoviePage;
+export default TemplateTvPage;

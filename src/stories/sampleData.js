@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
 export default {
     adult: false,
     backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
@@ -61,7 +57,6 @@ export default {
       },
     ],
     production_countries: [
-<<<<<<< HEAD
      
       {
         iso_3166_1: "France",
@@ -70,11 +65,6 @@ export default {
       {
         iso_3166_1: "Lithuania",
         name: "Lithuania",
-=======
-      {
-        iso_3166_1: "US",
-        name: "United States of America",
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218
       },
     ],
     release_date: "2017-12-13",
@@ -92,9 +82,4 @@ export default {
     video: false,
     vote_average: 7,
     vote_count: 9692,
-<<<<<<< HEAD
   };
-=======
-  };
-  
->>>>>>> f3c31fc2c6d054b86a1beec08a9e84b185ccf218

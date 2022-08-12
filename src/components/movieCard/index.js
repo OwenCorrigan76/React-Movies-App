@@ -1,3 +1,5 @@
+// this is the actual movie card with the movie image
+
 import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -19,7 +21,7 @@ const useStyles = makeStyles({
   card: { maxWidth: 345 },
   media: { height: 500 },
   avatar: {
-    backgroundColor: "rgb(255, 0, 0)",
+    backgroundColor: "rgb(255, 95, 0)",
   },
 });
 
@@ -32,8 +34,6 @@ export default function MovieCard({ movie, action }) {
   } else {
     movie.favourite = false;
   }
-
- 
 
   return (
     <Card className={classes.card}>

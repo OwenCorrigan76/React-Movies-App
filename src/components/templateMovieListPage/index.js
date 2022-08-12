@@ -1,3 +1,5 @@
+// this looks after the general appearance
+
 import React, { useState } from "react";
 import Header from "../headerMovieList";
 import FilterCard from "../filterMoviesCard";
@@ -9,8 +11,8 @@ import MovieList from "../movieList";
 
 const useStyles = makeStyles((theme) =>  ({
   root: {
-    backgroundColor: "#bfbfbf",
-    paddingTop: theme.spacing(7),
+    backgroundColor: "red",
+    paddingTop: theme.spacing(10),
   },
   fab: {
     marginTop: theme.spacing(8),

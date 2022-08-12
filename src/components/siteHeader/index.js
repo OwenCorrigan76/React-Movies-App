@@ -1,3 +1,5 @@
+// this looks after the navigation header
+
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -16,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appbar: {
-     color: 'red',
-   //  padding: theme.spacing(0.5),
+    color: "red",
+    padding: theme.spacing(0.5),
   },
   inactiveLink: {
     color: "white",
@@ -45,7 +47,8 @@ const SiteHeader = () => {
     { label: "Favourites", path: "/movies/favourites" },
     { label: "Upcoming", path: "/movies/upcoming" },
     { label: "Top Rated", path: "/movies/top_rated" },
-   // { label: "Straight To Video", path: "/movies/video" },
+    { label: 'Popular Actors', path: '/person/popular' },
+    { label: "Tv Shows", path: "/tvShows/tv" },
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -69,7 +72,7 @@ const SiteHeader = () => {
             TMDB Client
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            Your Favourite Move App!
+            Owen Corrigan Move App!
           </Typography>
           {isMobile ? (
             <>

@@ -1,5 +1,3 @@
-// this is the header inside more info
-
 import React from "react";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
@@ -8,7 +6,6 @@ import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import HomeIcon from "@material-ui/icons/Home";
-import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,39 +14,35 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexWrap: "wrap",
     padding: theme.spacing(1.5),
-    backgroundColor: "rgb(255, 95, 0)",
-
   },
   tagLine: {
     fontSize: "1.5rem",
   },
 }));
 
-const MovieHeader = (props) => {
-  const navigate = useNavigate();
-
+const TvHeader = (props) => {
   const classes = useStyles();
-  const movie = props.movie;
+  const tv = props.tv;
 
   return (
     <Paper component="div" className={classes.root}>
-     <IconButton aria-label="go back"  onClick={() => navigate(-1)}>
+      <IconButton aria-label="go back">
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
       <Typography variant="h4" component="h3">
-        {movie.title}
-        <a href={movie.homepage}>
+        {tv.title}
+        <a href={tv.homepage}>
           <HomeIcon color="primary" />
         </a>
         <br />
-        <span className={classes.tagLine}>{`   "${movie.tagline}"`} </span>
+        <span className={classes.tagLine}>{`   "${tv.tagline}"`} </span>
       </Typography>
-      <IconButton aria-label="go forward"  onClick={() => navigate(1)}>
+      <IconButton aria-label="go forward">
         <ArrowForwardIcon color="primary" fontSize="large" />
       </IconButton>
     </Paper>
   );
 };
 
-export default MovieHeader;
+export default TvHeader;

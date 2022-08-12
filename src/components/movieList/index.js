@@ -1,3 +1,4 @@
+// map over movies and return array of movies
 import React from "react";
 import Movie from "../movieCard";
 import Grid from "@material-ui/core/Grid";

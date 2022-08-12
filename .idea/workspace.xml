@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57713a40-1398-4c43-8a89-59ac40a8f2f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/api/tmdb-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/tmdb-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons copy/addToFavourites.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons copy/mustWatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons copy/removeFromFavourites.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons copy/writeReview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons/addToFavourites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardIcons/addToFavourites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons/mustWatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardIcons/mustWatch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons/removeFromFavourites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardIcons/removeFromFavourites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardIcons/writeReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardIcons/writeReview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterMoviesCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterMoviesCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/headerMovie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerMovie/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/headerMovieList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerMovieList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieDetails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieDetails/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieReview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieReview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieReviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieReviews/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reviewForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviewForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/siteHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/templateMovieListPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/templateMovieListPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/templateMoviePage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/templateMoviePage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/moviesContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/moviesContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/videoPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/filterMoviesCard.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/filterMoviesCard.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/movieCard.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/movieCard.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/movieDetails.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/movieDetails.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/movieHeader.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/movieHeader.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/sampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/sampleData.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DBINk1YZasS2I4u3BVn0aYu1Ow" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/owencorrigan/Downloads/ICT Skills 2 Assignment"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57713a40-1398-4c43-8a89-59ac40a8f2f2" name="Changes" comment="" />
+      <created>1660166012285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660166012285</updated>
+      <workItem from="1660166015487" duration="24000" />
+    </task>
+    <servers />
+  </component>
+</project>
