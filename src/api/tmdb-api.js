@@ -48,10 +48,10 @@ export const getGenres = async () => {
 
 export const getMovieImages = async ({ queryKey }) => {
   const [, idPart] = queryKey;
-  const { id } = idPart;
+  const { tv_id } = idPart;
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
+      `https://api.themoviedb.org/3/movie/${tv_id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
     );
     if (!response.ok) {
       throw new Error(response.json().message);
@@ -110,9 +110,11 @@ export const getTvShow = async (args) => {
 export const getTvImages = async ({ queryKey }) => {
   const [, idPart] = queryKey;
   const { tv_id } = idPart;
+  console.log("queryKey:", queryKey);
+  console.log("id:", tv_id);
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/tv/${tv_id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
+      `https://api.themoviedb.org/3/tv/${tv_id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
     );
     if (!response.ok) {
       throw new Error(response.json().message);
