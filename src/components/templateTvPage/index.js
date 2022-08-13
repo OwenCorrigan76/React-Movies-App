@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
 const TemplateTvPage = ({ tv, children }) => {
   const classes = useStyles();
   const { data, error, isLoading, isError } = useQuery(
-    ["images", { id: tv.id }],
-    getTvImages
-  );
+     ["images", { id: tv.id }],
+    getTvImages 
+      );
 
   if (isLoading) {
     return <Spinner />;
