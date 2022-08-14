@@ -1,3 +1,5 @@
+// template page with background and filter included
+
 import React, { useState } from 'react';
 import Header from '../headerMovieList';
 import FilterCard from '../filterMoviesCard';
@@ -9,7 +11,7 @@ import ActorList from '../actorList';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'red',
+    backgroundColor: 'purple',
     paddingTop: theme.spacing(7),
   },
   fab: {

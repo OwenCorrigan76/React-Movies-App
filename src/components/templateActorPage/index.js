@@ -10,9 +10,9 @@ import Spinner from '../spinner';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     paddingTop: theme.spacing(7),
-    color: "blue",
+    color: "black",
     margin: 0,
   },
   imageListRoot: {

@@ -1,4 +1,5 @@
-// details in the white box in more info
+// details in the white box in biography
+
 import React from "react";
 import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     listStyle: "none",
     padding: theme.spacing(1.5),
     margin: 0,
-    backgroundColor: "red",
+    backgroundColor: "purple",
   },
   chipLabel: {
     margin: theme.spacing(0.5),

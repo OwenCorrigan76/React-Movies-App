@@ -48,10 +48,10 @@ export const getGenres = async () => {
 
 export const getMovieImages = async ({ queryKey }) => {
   const [, idPart] = queryKey;
-  const { tv_id } = idPart;
+  const { id } = idPart;
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${tv_id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
+      `https://api.themoviedb.org/3/movie/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
     );
     if (!response.ok) {
       throw new Error(response.json().message);

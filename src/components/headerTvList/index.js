@@ -1,3 +1,5 @@
+// orange header in tv shows
+
 import React from "react";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
@@ -13,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexWrap: "wrap",
     marginBottom: theme.spacing(1.5),
+    backgroundColor: "rgb(255, 95, 0)",
+
   },
 }));
 

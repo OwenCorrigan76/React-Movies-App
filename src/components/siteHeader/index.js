@@ -18,8 +18,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appbar: {
-    color: "red",
+    color: "black",
     padding: theme.spacing(0.5),
+    background: "purple",
   },
   inactiveLink: {
     color: "white",
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
   },
   activeLink: {
-    color: "red",
+    color: "purple",
     padding: theme.spacing(1),
     fontSize: "1.5rem",
     background: "white",

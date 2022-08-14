@@ -1,4 +1,4 @@
-// page with actors cards on it
+// page with actors actual cards on it
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";

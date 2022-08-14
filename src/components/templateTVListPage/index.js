@@ -1,3 +1,5 @@
+// page behind cards including filter
+
 import React, { useState } from "react";
 import Header from "../headerTvList";
 import FilterCard from "../filterTvShowsCard";
@@ -9,7 +11,7 @@ import TvList from "../tvList";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#080426",
+    backgroundColor: "purple",
     paddingTop: theme.spacing(7),
   },
 

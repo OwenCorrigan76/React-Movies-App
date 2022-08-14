@@ -12,19 +12,19 @@ import Spinner from "../spinner";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: "white",
     paddingTop: theme.spacing(7),
-    background: "red",
+    color: "black",
+    margin: 0,
   },
   imageListRoot: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    
   },
   imageList: {
     width: 450,
     height: "100vh",
-    
   },
 }));
 
@@ -63,7 +63,6 @@ const TemplateMoviePage = ({ movie, children }) => {
               </ImageList>
             </div>
           </Grid>
-
           <Grid item xs={9}>
             {children}
           </Grid>

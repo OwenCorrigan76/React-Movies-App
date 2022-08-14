@@ -9,14 +9,17 @@ import HomeIcon from "@material-ui/icons/Home";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexWrap: "wrap",
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexWrap: 'wrap',
     padding: theme.spacing(1.5),
+    backgroundColor: "rgb(255, 95, 0)",
+    color: 'white',
+    marginLeft: 0,
   },
   tagLine: {
-    fontSize: "1.5rem",
+    fontSize: '1.5rem',
   },
 }));
 

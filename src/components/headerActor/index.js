@@ -1,3 +1,5 @@
+//header in popular actor bio
+
 import React from 'react';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -14,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     flexWrap: 'wrap',
     padding: theme.spacing(1.5),
-    backgroundColor: '#0A0F1F',
-    color: '#d2d2d2',
+    backgroundColor: "rgb(255, 95, 0)",
+    color: 'white',
     marginLeft: 0,
   },
   tagLine: {

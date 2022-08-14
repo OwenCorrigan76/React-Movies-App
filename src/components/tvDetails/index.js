@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
     listStyle: "none",
     padding: theme.spacing(1.5),
     margin: 0,
+      //  background: "black",
+
   },
   chipSet: {
     display: "flex",
@@ -26,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
     listStyle: "none",
     padding: theme.spacing(1.5),
     margin: 0,
+    background: "black",
+
   },
   chipLabel: {
     margin: theme.spacing(0.5),
@@ -55,8 +59,8 @@ const TvDetails = ({ tv }) => {
         ))}
       </Paper>
       <Paper component="ul" className={classes.chipSet}>
-        <Chip icon={<AccessTimeIcon />} label={`${tv.runtime} min.`} />
-        <Chip label={`Released: ${tv.release_date}`} />
+        <Chip icon={<AccessTimeIcon />} label={`${tv.episode_run_time} min.`} />
+        <Chip label={`Released: ${tv.first_air_date}`} />
       </Paper>
       </div>
       </>
