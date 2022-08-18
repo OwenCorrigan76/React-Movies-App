@@ -18,23 +18,27 @@ import Avatar from "@material-ui/core/Avatar";
 import { MoviesContext } from "../../contexts/moviesContext";
 
 const useStyles = makeStyles({
-  card: { maxWidth: 345 },
-  media: { height: 500 },
-  avatar: {
-    backgroundColor: "rgb(255, 95, 0)",
+  card: {
+    maxWidth: 345,
+    backgroundColor: "white",
+    color: "black",
   },
+  media: { height: 500 },
 });
 
 export default function MovieCard({ movie, action }) {
   const classes = useStyles();
-  const { favourites } = useContext(MoviesContext);
+  const { favourites, addToFavourites } = useContext(MoviesContext);
 
   if (favourites.find((id) => id === movie.id)) {
     movie.favourite = true;
   } else {
     movie.favourite = false;
   }
-
+  const handleAddToFavourite = (e) => {
+    e.preventDefault();
+    addToFavourites(movie);
+  };
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -79,7 +83,7 @@ export default function MovieCard({ movie, action }) {
       <CardActions disableSpacing>
         {action(movie)}
         <Link to={`/movies/${movie.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
+          <Button variant="contained" size="medium" color="primary">
             More Info ...
           </Button>
         </Link>

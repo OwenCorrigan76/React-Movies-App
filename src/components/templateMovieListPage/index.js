@@ -66,6 +66,8 @@ function MovieListPageTemplate({ movies, title, action }) {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
+            
+
         <FilterCard
           onUserInput={handleChange}
           titleFilter={titleFilter}

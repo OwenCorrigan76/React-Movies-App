@@ -50,11 +50,11 @@ const TemplateTvPage = ({ tv, children }) => {
           <Grid item xs={2}>
             <div className={classes.imageListRoot}>
               <ImageList rowHeight={500} className={classes.gridList} cols={1}>
-                {images.map((image) => (
-                  <ImageListItem key={image.file_path} cols={1}>
+                {tv.seasons.map((s) => (
+                  <ImageListItem key={s.poster_path} cols={1}>
                     <img
-                      src={`https://image.tmdb.org/t/p/w500/${image.file_path}`}
-                      alt={image.poster_path}
+                      src={`https://image.tmdb.org/t/p/w500/${s.poster_path}`}
+                      alt={s.poster_path}
                     />
                   </ImageListItem>
                 ))}

@@ -75,6 +75,38 @@ export const getTopRatedMovies = async () => {
     throw error;
   }
 };
+
+export const getSimilarMovies =  async (id) => {
+ const response = await fetch(
+    `https://api.themoviedb.org/3/movie/616037/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+    );
+    const json = await response.json();
+    return json.results;
+  };
+  
+
+export const getUpcomingMovies = async () => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`
+    );
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getMovieReviews = async (id) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
+  );
+  const json = await res.json();
+  return json.results;
+};
+
 export const getTv = async () => {
   try {
     const response = await fetch(
@@ -120,27 +152,6 @@ export const getTvImages = ({ queryKey }) => {
   .catch((error) => {
     throw error
  });
-};
-export const getUpcomingMovies = async () => {
-  try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`
-    );
-    if (!response.ok) {
-      throw new Error(response.json().message);
-    }
-    return await response.json();
-  } catch (error) {
-    throw error;
-  }
-};
-
-export const getMovieReviews = async (id) => {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
-  );
-  const json = await res.json();
-  return json.results;
 };
 
 

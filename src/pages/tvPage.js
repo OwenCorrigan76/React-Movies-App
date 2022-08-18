@@ -5,6 +5,7 @@ import Spinner from "../components/spinner";
 import { getTv } from "../api/tmdb-api"; // new import from api page
 import { getTvImages } from '../api/tmdb-api';
 // import MustWatchIcon from '../components/cardIcons/mustWatch'
+import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 
 const NewTvPage = (props) => {
   const { data, error, isLoading, isError } = useQuery(
@@ -24,12 +25,13 @@ const NewTvPage = (props) => {
 
   return (
     <PageTemplate
-      title="Discover Tv"
+      title="Discover Tv Shows"
       tvShows={tvShows}
       action={(tv) => {
+        return <AddToFavouritesIcon tv={tv} />
       }}
     />
-  );
+);
 };
 
 export default NewTvPage;

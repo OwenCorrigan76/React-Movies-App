@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -10,9 +10,10 @@ import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
-import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
+import Avatar from "@material-ui/core/Avatar";
+import { TvShowsContext } from "../../contexts/tvShowsContext";
 
 const useStyles = makeStyles({
   card: {
@@ -25,18 +26,35 @@ const useStyles = makeStyles({
 
 export default function TvCard({ tv, action }) {
   const classes = useStyles();
+  const { favourites, addToFavourites } = useContext(TvShowsContext);
 
+  if (favourites.find((id) => id === tv.id)) {
+    tv.favourite = true;
+  } else {
+    tv.favourite = false;
+  }
+  const handleAddToFavourite = (e) => {
+    e.preventDefault();
+    addToFavourites(tv);
+  };
+ 
   return (
     <Card className={classes.card}>
       <CardHeader
         className={classes.header}
-        title={
+         avatar={
+          tv.favourite ? (
+            <Avatar className={classes.avatar}>
+              <FavoriteIcon />
+            </Avatar>
+          ) : null
+        } 
+                title={
           <Typography variant="h5" component="p">
             {tv.name}{" "}
           </Typography>
         }
-        style={{ height: 70 }}
-      />
+      />{" "}
       <CardMedia
         className={classes.media}
         image={
@@ -49,13 +67,19 @@ export default function TvCard({ tv, action }) {
         <Grid container>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
-              <StarRateIcon fontSize="medium" />
-              {" Popularity "} {tv.popularity}
+               {" Popularity "} {tv.popularity}
             </Typography>
+            <Grid item xs={6}>
+              <Typography variant="h6" component="p">
+                <StarRateIcon fontSize="small" />
+                {"  "} {tv.vote_average}{" "}
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
+      {action(tv)}
         <Link to={`/tvShows/${tv.id}`}>
           <Button variant="contained" size="medium" color="primary">
             TV Show Info
