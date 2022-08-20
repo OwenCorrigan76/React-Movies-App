@@ -77,10 +77,10 @@ export const getTopRatedMovies = async () => {
 };
 
 export const getSimilarMovies =  async (id) => {
- const response = await fetch(
+ const res = await fetch(
     `https://api.themoviedb.org/3/movie/616037/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
     );
-    const json = await response.json();
+    const json = await res.json();
     return json.results;
   };
   
@@ -102,6 +102,14 @@ export const getUpcomingMovies = async () => {
 export const getMovieReviews = async (id) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
+  );
+  const json = await res.json();
+  return json.results;
+};
+
+export const getTvShowReviews = async (id) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
   );
   const json = await res.json();
   return json.results;

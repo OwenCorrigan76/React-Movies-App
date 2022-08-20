@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
-import MonetizationIcon from "@material-ui/icons/MonetizationOn";
+// import MonetizationIcon from "@material-ui/icons/MonetizationOn";
 import StarRate from "@material-ui/icons/StarRate";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import Fab from "@material-ui/core/Fab";
+import NavigationIcon from "@material-ui/icons/Navigation";
+import TvReviews from "../tvReviews";
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -38,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
 
 const TvDetails = ({ tv }) => {
   const classes = useStyles();
+
+  const [drawerOpen, setDrawerOpen] = useState(false); // New
+ 
   return (
     <>
       <Typography variant="h5" component="h3">
@@ -63,6 +70,23 @@ const TvDetails = ({ tv }) => {
         <Chip label={`Released: ${tv.first_air_date}`} />
       </Paper>
       </div>
+      <Fab
+        color="secondary"
+        variant="extended"
+        onClick={() => setDrawerOpen(true)}
+        className={classes.fab}
+      >
+       
+        <NavigationIcon />
+        Click for Reviews
+      </Fab>
+      <Drawer
+        anchor="top"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        <TvReviews tv={tv} />
+      </Drawer>
       </>
   );
 };

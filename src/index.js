@@ -20,8 +20,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import MoviesContextProvider from "./contexts/moviesContext";
 import TvShowsContextProvider from "./contexts/tvShowsContext";
 import AddMovieReviewPage from "./pages/addMovieReviewPage";
-import LoginPage from "./pages/loginPage";
-import RegisterImperative from "./registerImperative";
+// import LoginHeader from "./components/headerLogin"
 
 const queryClient = new QueryClient({
   defaultOptions: {

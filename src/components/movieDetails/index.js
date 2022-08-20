@@ -14,7 +14,8 @@ import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import MovieReviews from "../movieReviews";
 import { Link } from "react-router-dom";
-import { getSimilarMovies } from "../../api/tmdb-api"; // import similar from api
+import { getActor, getSimilarMovies } from "../../api/tmdb-api"; // import similar from api
+import CardActions from "@material-ui/core/CardActions";
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexWrap: "wrap",
     listStyle: "none",
-    padding: theme.spacing(1.5),
+    padding: theme.spacing(.5),
     margin: 0,
   },
   chipLabel: {
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   fab: {
     //New
     position: "fixed",
-    top: theme.spacing(15),
+    top: theme.spacing(55),
     right: theme.spacing(2),
   },
 }));
@@ -51,6 +52,8 @@ const useStyles = makeStyles((theme) => ({
 const MovieDetails = ( {movie}) => {
   const classes = useStyles();
   const [similar, setSimilar] = useState([]);
+  const [actor, setActor] = useState([]);
+
   const [drawerOpen, setDrawerOpen] = useState(false); // New
   useEffect(() => {
     getSimilarMovies(movie.id).then((similar) => {
@@ -59,6 +62,13 @@ const MovieDetails = ( {movie}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
+  useEffect(() => {
+    getActor(actor.id).then((actor) => {
+      setActor(actor);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+ 
 
   return (
     <>
@@ -111,8 +121,16 @@ const MovieDetails = ( {movie}) => {
           <Button variant="contained" size="medium" color="primary">
             Similar Movies
           </Button>
+        </Link> 
+        <CardActions disableSpacing>
+      </CardActions>
+        <Link to={`/actor/${movie.id}/${actor.id}`}>
+          <Button variant="contained" size="medium" color="primary">
+            Actor Biography
+          </Button>
         </Link>
-
+        <CardActions disableSpacing>
+      </CardActions>
         <NavigationIcon />
         Click for Reviews
       </Fab>

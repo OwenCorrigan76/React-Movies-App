@@ -1,6 +1,7 @@
 // this is the actual movie card with the movie image
 
 import React, { useContext } from "react";
+import { MoviesContext } from "../../contexts/moviesContext";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -15,7 +16,7 @@ import StarRateIcon from "@material-ui/icons/StarRate";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
-import { MoviesContext } from "../../contexts/moviesContext";
+
 
 const useStyles = makeStyles({
   card: {
