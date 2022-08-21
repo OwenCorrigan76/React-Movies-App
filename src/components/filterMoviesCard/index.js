@@ -1,4 +1,4 @@
-// this is the filter moveis and Sort the movies card - turned orange
+// this is the filter moveis and Sort the movies card 
 
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";

@@ -1,30 +1,37 @@
 
 # ICT Skills 2 Assignment.
 
-Name: [your name]
-
+Name: Owen Corrigan
+GitHub Reopsitory - https://github.com/OwenCorrigan76/assignment-ict2
 ## Overview.
+This app is a Movie App that features movie and Tv shows, details, reviews and actors. The information is taken from REST api endpoints taht are part of the TMDB api. Along with a feature set provided in previous college labs, the new / modified features include:
 
-[ A paragraph on your React app's concept followed by a bullet-point list of its feature set - only list new/modified features if you are expanding the Movies app. ]
++ Feature 1 - Similar Movies
++ Feature 2 - Popular Actors
++ Feature 3 - Tv Shows
++ Feature 4 - Top Rated Movies
++ Feature 5 - Favourite Tv Shows
++ Feature 6 - Actors Biography
++ Feature 7 - Updated Storybook
++ Feature 8 - Firebase Login / Authetication
++ Feature 9 - Updated UI
 
-e.g. 
-+ Feature 1
-+ Feature 2
-+ Feature 3
-+ etc
-+ etc
+
 
 ## Setup requirements.
-
-[ Briefly state (to a third party) the setup steps necessary to run your app/client locally, e.g. .env and any other config files.]
+To run the program, firstly pull from the git repository shown above. Once the repo is on a local machine, open the program in an IDE. This program will be run using Node.js. The packages and dependencies can be retrieved by running npm install. A .env file must be introduced with the following information:
+REACT_APP_TMDB_KEY=<<api key>>
+FAST_REFRESH=false To run the program, type npm start.
+The api key can be retireved when the user signs up to the TMDB api. This can be done by following this link:
+https://www.themoviedb.org/signup
 
 ## App Design.
+The app has been slightly modified to utilise some new css styling throughout. The colours of the pages have been modernised using bright and fresh clours. The layout is simple with each page being accesible from the site header nav bar.  
 
 ### Routing/Navigation.
 
-[List the set of routes your app supports - only mention new instances if you expanded the Movies Fan app. State the view linked with each route.] 
+Below is a list of the set of routes this app supports:
 
-e.g.
 + /movies/:id - detailed information on a specific movie.
 + /movies/upcoming - lists movies soon to be shown in cinemas.
 + etc.
