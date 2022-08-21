@@ -93,8 +93,11 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
-[d1]: ./public/discover1.png
-[d2]: ./public/discover2.png
-[detail]: ./public/detail.png
-[caching]: ./public/caching.png
-[stories]: ./public/stories.png
+[Ui]: ./public/1_Ui.png
+[Tv Shows]: ./public/2_Tv_Shows.png
+[Tv Show Detaills]: ./public/3_Tv_Show_Details.png
+[Tv Show Review]: ./public/4_Tv_Show_Review.png
+[Tv Show Favourites]: ./public/5_Tv_Show_Favourites.png
+[Top Rated Movies]: ./public/6_Top_Rated_Movies.png
+[Popular Actors]: ./public/7_Popular_Actors.png
+[Actors Bio]: ./public/8_Actors_Biography.png
