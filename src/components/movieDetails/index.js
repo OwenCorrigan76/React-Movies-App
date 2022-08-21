@@ -11,11 +11,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import NavigationIcon from "@material-ui/icons/Navigation";
 import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import MovieReviews from "../movieReviews";
 import { Link } from "react-router-dom";
 import { getActor, getSimilarMovies } from "../../api/tmdb-api"; // import similar from api
-import CardActions from "@material-ui/core/CardActions";
+// import CardActions from "@material-ui/core/CardActions";
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {

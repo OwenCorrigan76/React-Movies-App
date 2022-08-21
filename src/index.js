@@ -2,7 +2,7 @@
 import React from "react";
 import SiteHeader from "./components/siteHeader";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Router, Route, Navigate, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import TvShowPage from "./pages/tvDetailsPage";
