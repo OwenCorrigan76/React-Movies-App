@@ -14,6 +14,7 @@ const SimilarMoviesPage = (props) => {
     getMovie,
   );
 
+
   if (isLoading) {
     return <Spinner />;
   }
@@ -22,7 +23,7 @@ const SimilarMoviesPage = (props) => {
     return <h1>{error.message}</h1>;
   }
   const movie = data.results;
-
+console.log("THis is a ",  movie)
 
   return (
     <PageTemplate

@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexWrap: "wrap",
     listStyle: "none",
-    padding: theme.spacing(.5),
+    padding: theme.spacing(0.5),
     margin: 0,
   },
   chipLabel: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MovieDetails = ( {movie}) => {
+const MovieDetails = ({ movie }) => {
   const classes = useStyles();
   const [similar, setSimilar] = useState([]);
   const [actor, setActor] = useState([]);
@@ -61,14 +61,21 @@ const MovieDetails = ( {movie}) => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   useEffect(() => {
     getActor(actor.id).then((actor) => {
       setActor(actor);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
- 
+
+  useEffect(() => {
+    getSimilarMovies(similar.id).then((similar) => {
+      console.log("This is similar", similar);
+      setSimilar(similar);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -116,13 +123,12 @@ const MovieDetails = ( {movie}) => {
       >
         <Link
           to={`/movies/${movie.id}/similar`}
-          style={{ textDecoration: "none" }}
->
-          <Button variant="contained" size="medium" color="primary">
+        >
+         
             Similar Movies
-          </Button>
-        </Link> 
-        <CardActions disableSpacing>
+     
+        </Link>
+        {/* <CardActions disableSpacing>
       </CardActions>
         <Link to={`/actor/${movie.id}/${actor.id}`}>
           <Button variant="contained" size="medium" color="primary">
@@ -130,7 +136,7 @@ const MovieDetails = ( {movie}) => {
           </Button>
         </Link>
         <CardActions disableSpacing>
-      </CardActions>
+      </CardActions> */}
         <NavigationIcon />
         Click for Reviews
       </Fab>

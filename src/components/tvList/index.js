@@ -1,5 +1,6 @@
+// map over tv shows and return array of shows
 import React from "react";
-import Tv from "../tvCard/";
+import Tv from "../tvCard";
 import Grid from "@material-ui/core/Grid";
 
 const TvList = ({ tvShows, action }) => {
@@ -8,7 +9,7 @@ const TvList = ({ tvShows, action }) => {
       <Tv key={t.id} tv={t} action={action} />
     </Grid>
   ));
-    return tvCards;
+  return tvCards;
 };
 
 export default TvList;

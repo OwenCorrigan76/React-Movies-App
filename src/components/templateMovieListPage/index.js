@@ -37,7 +37,6 @@ function MovieListPageTemplate({ movies, title, action }) {
     .filter((m) => {
       return genreId > 0 ? m.genre_ids.includes(genreId) : true;
     });
-
   const handleChange = (type, value) => {
     if (type === "name") setTitleFilter(value);
     else setGenreFilter(value);
@@ -66,8 +65,6 @@ function MovieListPageTemplate({ movies, title, action }) {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-            
-
         <FilterCard
           onUserInput={handleChange}
           titleFilter={titleFilter}

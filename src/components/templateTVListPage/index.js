@@ -1,5 +1,4 @@
 // page behind cards including filter
-
 import React, { useState } from "react";
 import Header from "../headerTvList";
 import FilterCard from "../filterTvShowsCard";
@@ -28,19 +27,18 @@ function TvListPageTemplate({ tvShows, title, action }) {
   const [titleFilter, setTitleFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const [drawerOpen, setDrawerOpen] = useState(false);
-  // come back to above if I decide to use tv filter
 
   const genreId = Number(genreFilter);
 
   let displayedTvShows = tvShows
     .filter((t) => {
-      return t.name.toLowerCase().search(titleFilter.toLowerCase()) !== -1;
-    }) 
-        .filter((t) => {
+      return t.title?.toLowerCase().search(titleFilter.toLowerCase()) !== -1;
+    })
+    .filter((t) => {
       return genreId > 0 ? t.genre_ids.includes(genreId) : true;
     });
   const handleChange = (type, value) => {
-    if (type === "name") setTitleFilter(value);
+    if (type === "TV") setTitleFilter(value);
     else setGenreFilter(value);
   };
   return (
@@ -59,18 +57,19 @@ function TvListPageTemplate({ tvShows, title, action }) {
         onClick={() => setDrawerOpen(true)}
         className={classes.fab}
       >
-      Filter
+        Filter
       </Fab>
       <Drawer
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-      {   <FilterCard
+        <FilterCard
           onUserInput={handleChange}
           titleFilter={titleFilter}
           genreFilter={genreFilter}
-        /> } 
+        />
+        
       </Drawer>
     </>
   );

@@ -4,7 +4,6 @@ import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
 import { getTv } from "../api/tmdb-api"; // new import from api page
 import { getTvImages } from '../api/tmdb-api';
-// import MustWatchIcon from '../components/cardIcons/mustWatch'
 import AddToTvFavouritesIcon from '../components/tvCardIcons/addToTvFavourites'
 
 const NewTvPage = (props) => {

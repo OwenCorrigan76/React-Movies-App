@@ -24,7 +24,7 @@ const PopularActorsPage = (props) => {
   }
 
   const actor = data.results;
-
+   console.log("List of actors" , actor)
   return (
     <PageTemplate
       title='Popular Actors'

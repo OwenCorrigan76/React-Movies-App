@@ -93,14 +93,6 @@ export const getTopRatedMovies = async () => {
   }
 };
 
-export const getSimilarMovies =  async (id) => {
- const res = await fetch(
-    `https://api.themoviedb.org/3/movie/616037/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
-    );
-    const json = await res.json();
-    return json.results;
-  };
-  
 
 export const getUpcomingMovies = async () => {
   try {
@@ -218,6 +210,24 @@ export const getActorImages = async ({ queryKey }) => {
   }
 };
 
+export const getSimilarMovies = async ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;
+  console.log("queryKey:", queryKey);
+  console.log("id:", id);
+  try {
+  const res = await fetch(
+     `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+     );
+     if (!res.ok) {
+       throw new Error(res.json().message);
+     }
+     return await res.json();
+   } catch (error) {
+     throw error;
+   }
+ };
+   
 export const getPopularActors = async () => {
   try {
     const response = await fetch(
@@ -232,6 +242,8 @@ export const getPopularActors = async () => {
   }
 };
 
+
+ 
 export const getActor = async (args) => {
   console.log(args);
   const [, idPart] = args.queryKey;

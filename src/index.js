@@ -1,27 +1,32 @@
 // entry point to app
-
-import SiteHeader from "./components/siteHeader";
 import React from "react";
+import SiteHeader from "./components/siteHeader";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
+import { BrowserRouter, Router, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import TvShowPage from "./pages/tvDetailsPage";
 import PopularActorsPage from "./pages/popularActorsPage";
 import ActorsPage from "./pages/actorDetailsPage";
-import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
-import FavouriteTvShowsPage from "./pages/favouriteTvShowsPage"; // NEW
-import UpcomingMoviesPage from "./pages/upcomingMoviesPage"; // NEW
-import SimilarMoviesPage from "./pages/similarMoviesPage"; // NEW
-import TopRatedMoviesPage from "./pages/topRatedMoviesPage"; // NEW
-import TvPage from "./pages/tvPage"; // NEW
+import FavouriteMoviesPage from "./pages/favouriteMoviesPage";
+import FavouriteTvShowsPage from "./pages/favouriteTvShowsPage";
+import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
+import SimilarMoviesPage from "./pages/similarMoviesPage";
+import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
+import TvPage from "./pages/tvPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import MoviesContextProvider from "./contexts/moviesContext";
 import TvShowsContextProvider from "./contexts/tvShowsContext";
 import AddMovieReviewPage from "./pages/addMovieReviewPage";
-// import LoginHeader from "./components/headerLogin"
+/* import Home from "./pages/Home";
+ import Login from "./pages/Login";
+import Logout from "./pages/Logout";
+import Register from "./pages/Register";
+import Reset from "./pages/Reset";
+import Dashboard from "./pages/Dashboard";
+import Navigation from "./components/nav/navigation"; */
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,7 +45,16 @@ const App = () => {
         <SiteHeader />
         <MoviesContextProvider>
           <TvShowsContextProvider>
-            <Routes>
+           
+          <Routes>
+            {/* <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/reset" element={<Reset />} />
+            <Route path="/dashboard" element={<Dashboard />} /> */}
+
+
               <Route
                 path="/movies/favourites"
                 element={<FavouriteMoviesPage />}
