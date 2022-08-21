@@ -1,4 +1,4 @@
-// this is the filter moveis and Sort the movies card 
+// this is the filter moveis and Sort the movies card
 
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
@@ -11,7 +11,7 @@ import TextField from "@material-ui/core/TextField";
 import SearchIcon from "@material-ui/icons/Search";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import { getGenres } from "../../api/tmdb-api"; 
+import { getGenres } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from "../spinner";
 
@@ -64,7 +64,7 @@ export default function FilterMoviesCard(props) {
             <SearchIcon fontSize="large" />
             Filter the movies.
           </Typography>
-          <TextField  
+          <TextField
             className={classes.formControl}
             id="filled-search"
             label="Search field"
@@ -75,7 +75,7 @@ export default function FilterMoviesCard(props) {
           />
           <FormControl className={classes.formControl}>
             <InputLabel id="genre-label">Genre</InputLabel>
-            <Select 
+            <Select
               labelId="genre-label"
               id="genre-select"
               value={props.genreFilter}
