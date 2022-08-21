@@ -8,7 +8,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
@@ -26,16 +25,16 @@ const useStyles = makeStyles({
 
 export default function TvCard({ tv, action }) {
   const classes = useStyles();
-  const { favourites, addToFavourites } = useContext(TvShowsContext);
+  const { favourites, addToTvFavourites } = useContext(TvShowsContext);
 
   if (favourites.find((id) => id === tv.id)) {
     tv.favourite = true;
   } else {
     tv.favourite = false;
   }
-  const handleAddToFavourite = (e) => {
+  const handleAddToTvFavourite = (e) => {
     e.preventDefault();
-    addToFavourites(tv);
+    addToTvFavourites(tv);
   };
  
   return (

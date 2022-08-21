@@ -56,8 +56,8 @@ const MovieDetails = ( {movie}) => {
 
   const [drawerOpen, setDrawerOpen] = useState(false); // New
   useEffect(() => {
-    getSimilarMovies(movie.id).then((similar) => {
-      setSimilar(similar);
+    getSimilarMovies(movie.id).then((movie) => {
+      setSimilar(movie);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
 
 const TvDetails = ({ tv }) => {
   const classes = useStyles();
-
   const [drawerOpen, setDrawerOpen] = useState(false); // New
  
   return (
@@ -59,9 +58,9 @@ const TvDetails = ({ tv }) => {
         <li>
           <Chip label="Genres" className={classes.chipLabel} color="primary" />
         </li>
-        {tv.genres.map((g) => (
-          <li key={g.name}>
-            <Chip label={g.name} className={classes.chip} />
+        {tv.genres.map((t) => (
+          <li key={t.name}>
+            <Chip label={t.name} className={classes.chip} />
           </li>
         ))}
       </Paper>

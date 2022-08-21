@@ -9,7 +9,6 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import { getMovieImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from "../spinner";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "white",
@@ -66,6 +65,7 @@ const TemplateMoviePage = ({ movie, children }) => {
           <Grid item xs={9}>
             {children}
           </Grid>
+         
         </Grid>
       </div>
     </>

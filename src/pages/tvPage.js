@@ -5,7 +5,7 @@ import Spinner from "../components/spinner";
 import { getTv } from "../api/tmdb-api"; // new import from api page
 import { getTvImages } from '../api/tmdb-api';
 // import MustWatchIcon from '../components/cardIcons/mustWatch'
-import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
+import AddToTvFavouritesIcon from '../components/tvCardIcons/addToTvFavourites'
 
 const NewTvPage = (props) => {
   const { data, error, isLoading, isError } = useQuery(
@@ -28,7 +28,7 @@ const NewTvPage = (props) => {
       title="Discover Tv Shows"
       tvShows={tvShows}
       action={(tv) => {
-        return <AddToFavouritesIcon tv={tv} />
+        return <AddToTvFavouritesIcon tv={tv} />
       }}
     />
 );

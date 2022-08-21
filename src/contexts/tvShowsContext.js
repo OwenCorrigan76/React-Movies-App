@@ -5,18 +5,18 @@ import React, { useState } from "react";
 export const TvShowsContext = React.createContext(null);
 
 const TvShowsContextProvider = (props) => {
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setTvFavourites] = useState([]);
   
 
-  const addToFavourites = (tv) => {
+  const addToTvFavourites = (tv) => {
     if (!favourites.includes(tv.id)) {
       let newFavourites = [...favourites, tv.id];
-      setFavourites(newFavourites);
+      setTvFavourites(newFavourites);
     }
   };
   // We will use this function in a later section
-  const removeFromFavourites = (tv) => {
-    setFavourites(favourites.filter((tId) => tId !== tv.id));
+  const removeFromTvFavourites = (tv) => {
+    setTvFavourites(favourites.filter((tId) => tId !== tv.id));
   };
 
    
@@ -24,8 +24,8 @@ const TvShowsContextProvider = (props) => {
     <TvShowsContext.Provider
       value={{
         favourites,
-        addToFavourites,
-        removeFromFavourites,
+        addToTvFavourites,
+        removeFromTvFavourites,
      
       }}
     >

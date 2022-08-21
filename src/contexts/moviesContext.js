@@ -10,7 +10,7 @@ const MoviesContextProvider = (props) => {
   const [favourites, setFavourites] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
   const [top_rated, setTopRated] = useState([]);
-  const [tvShows, setTvShow] = useState([]);
+ //  const [tvShows, setTvShow] = useState([]);
 
   const addToFavourites = (movie) => {
     if (!favourites.includes(movie.id)) {
@@ -36,13 +36,7 @@ const MoviesContextProvider = (props) => {
     }
   };
 
-  const addTvShow = (tv) => {
-    if (!top_rated.includes(tv.id)) {
-      let newTvshow = [...tvShows, tv.id];
-      setTvShow(newTvshow);
-    }
-  };
-
+  
 
   const addReview = (movie, review) => {
     setMyReviews({ ...myReviews, [movie.id]: review });
@@ -66,8 +60,7 @@ const MoviesContextProvider = (props) => {
         addReview,
         mustWatch,
         addToMustWatch,
-        tvShows,
-        addTvShow,
+       
       }} 
     >
       {props.children}

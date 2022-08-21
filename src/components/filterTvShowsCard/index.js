@@ -62,7 +62,7 @@ export default function FilterTvShowsCard(props) {
             <SearchIcon fontSize="large" />
             Filter the shows.
           </Typography>
-          <TextField  refactored 
+          <TextField   
             className={classes.formControl}
             id="filled-search"
             label="Search field"

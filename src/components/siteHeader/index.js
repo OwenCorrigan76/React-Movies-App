@@ -46,6 +46,8 @@ const SiteHeader = () => {
   const menuOptions = [
     { label: "Home", path: "/homePage" },
     { label: "Favourites", path: "/movies/favourites" },
+    { label: "Favourites Tv", path: "/tvShows/favourites" },
+
     { label: "Upcoming", path: "/movies/upcoming" },
     { label: "Top Rated", path: "/movies/top_rated" },
     { label: 'Popular Actors', path: '/person/popular' },

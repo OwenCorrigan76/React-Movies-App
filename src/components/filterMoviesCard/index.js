@@ -16,7 +16,6 @@ import { useQuery } from "react-query";
 import Spinner from "../spinner";
 
 const useStyles = makeStyles((theme) => ({
-  // hook function
   root: {
     maxWidth: 345,
   },
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 220,
-    backgroundColor: "rgb(255, 95, 0)",
+    backgroundColor: "rgb(255, 255, 255)",
   },
 }));
 
@@ -65,18 +64,18 @@ export default function FilterMoviesCard(props) {
             <SearchIcon fontSize="large" />
             Filter the movies.
           </Typography>
-          <TextField /* refactored */
+          <TextField  
             className={classes.formControl}
             id="filled-search"
             label="Search field"
             type="search"
-            value={props.titleFilter}
+            value={props.tilteFilter}
             variant="filled"
             onChange={handleTextChange}
           />
           <FormControl className={classes.formControl}>
             <InputLabel id="genre-label">Genre</InputLabel>
-            <Select /*  also refactored */
+            <Select 
               labelId="genre-label"
               id="genre-select"
               value={props.genreFilter}

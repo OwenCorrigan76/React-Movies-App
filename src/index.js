@@ -10,6 +10,7 @@ import TvShowPage from "./pages/tvDetailsPage";
 import PopularActorsPage from "./pages/popularActorsPage";
 import ActorsPage from "./pages/actorDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
+import FavouriteTvShowsPage from "./pages/favouriteTvShowsPage"; // NEW
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage"; // NEW
 import SimilarMoviesPage from "./pages/similarMoviesPage"; // NEW
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage"; // NEW
@@ -44,9 +45,16 @@ const App = () => {
                 path="/movies/favourites"
                 element={<FavouriteMoviesPage />}
               />
+              <Route
+                path="/tvShows/favourites"
+                element={<FavouriteTvShowsPage />}
+              />
 
               <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
-              <Route path='/movies/:id/similar' element={<SimilarMoviesPage />} />
+              <Route
+                path="/movies/:id/similar"
+                element={<SimilarMoviesPage />}
+              />
               <Route
                 path="/movies/top_rated"
                 element={<TopRatedMoviesPage />}
@@ -59,8 +67,8 @@ const App = () => {
               <Route path="/tvShows/:id" element={<TvShowPage />} />
               <Route path="/person/popular" element={<PopularActorsPage />} />
               <Route path="/" element={<HomePage />} />
-{/*             <Route path="/" element={<LoginPage />} />
- */}
+              {/*             <Route path="/" element={<LoginPage />} />
+               */}
               <Route path="*" element={<Navigate to="/" replace />} />
               <Route path="/reviews/:id" element={<MovieReviewPage />} />
             </Routes>
