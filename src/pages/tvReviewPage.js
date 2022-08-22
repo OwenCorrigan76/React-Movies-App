@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import PageTemplate from "../components/templateMoviePage";
+import PageTemplate from "../components/templateTvPage";
 import TvReview from "../components/tvReview";
 
 const TvReviewPage = (props) => {

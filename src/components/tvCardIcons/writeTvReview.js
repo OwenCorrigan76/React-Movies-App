@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const WriteTvReviewIcon = ({ tv }) => {
   return (
     <Link
-      to={"/reviews/form"}
+      to={"/reviewsTv/form"}
       state={{
         tvId: tv.id,
       }}

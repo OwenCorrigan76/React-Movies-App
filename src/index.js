@@ -20,6 +20,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import MoviesContextProvider from "./contexts/moviesContext";
 import TvShowsContextProvider from "./contexts/tvShowsContext";
 import AddMovieReviewPage from "./pages/addMovieReviewPage";
+import AddTvReviewPage from "./pages/addTvReviewPage";
 /* import Home from "./pages/Home";
  import Login from "./pages/Login";
 import Logout from "./pages/Logout";
@@ -75,6 +76,8 @@ const App = () => {
               />
               <Route path="/tvShows/:id" element={<TvShowPage />} />
               <Route path="/tvShows/tv" element={<TvPage />} />
+              <Route path="/reviewsTv/form" element={<AddTvReviewPage />} />
+
               <Route path="/actors/:id" element={<ActorsPage />} />
               <Route path="/person/popular" element={<PopularActorsPage />} />
               <Route path="/" element={<HomePage />} />

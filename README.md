@@ -15,6 +15,7 @@ This app is a Movie App that features movie and Tv shows, details, reviews and a
 + Feature 7 - Updated Storybook
 + Feature 8 - Firebase Login / Authetication
 + Feature 9 - Updated UI
++ Feature 10 - Write Tv Show Review
 
 
 
@@ -86,6 +87,11 @@ Below is a list of the set of routes this app supports:
 ### 9 Filter Tv Shows
 ![][i10]
 
+<br/>
+
+### 10 Write Tv Show review
+![][i11]
+
 [ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
 
 e.g.
@@ -146,4 +152,5 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [i7]: ./public/i7.png
 [i8]: ./public/i8.png
 [i9]: ./public/i9.png
-
+[i10]: ./public/i10.png
+[i11]: ./public/i11.png
