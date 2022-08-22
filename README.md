@@ -81,16 +81,15 @@ Below is a list of the set of routes this app supports:
 
 ### 8 Similar Movies Page
 ![][i9]
-
 <br/>
 
 ### 9 Filter Tv Shows
 ![][i10]
-
 <br/>
 
 ### 10 Write Tv Show review
 ![][i11]
+<br/>
 
 [ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
 
@@ -103,6 +102,7 @@ e.g.
 ![][i5]
 
 <br/>
+
 ### Component catalogue.
 
 [ Use the Storybook UI to highlight the new components for which you developed stories.]
