@@ -47,10 +47,9 @@ const SiteHeader = () => {
     { label: "Home", path: "/homePage" },
     { label: "Favourites", path: "/movies/favourites" },
     { label: "Favourites Tv", path: "/tvShows/favourites" },
-
     { label: "Upcoming", path: "/movies/upcoming" },
     { label: "Top Rated", path: "/movies/top_rated" },
-    { label: 'Popular Actors', path: '/person/popular' },
+    { label: "Popular Actors", path: "/person/popular" },
     { label: "Tv Shows", path: "/tvShows/tv" },
   ];
 
@@ -123,7 +122,6 @@ const SiteHeader = () => {
                     isActive ? classes.activeLink : classes.inactiveLink
                   }
                   color="inherit"
-                  // onClick={() => handleMenuSelect(opt.path)}
                 >
                   {opt.label}
                 </NavLink>
