@@ -84,31 +84,20 @@ Below is a list of the set of routes this app supports:
 <br/>
 
 ### 9 Filter Tv Shows
-![][i10]
+![][ia]
 <br/>
 
 ### 10 Write Tv Show review
-![][i11]
+![][ib]
 <br/>
 
-[ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
-
-e.g.
->Lists movies from the Discover endpoint. Filtering on title and genre attributes is supported.
-
-
->Shows detailed information on a specific movie
-
-![][i5]
-
-<br/>
 
 ### Component catalogue.
 
 [ Use the Storybook UI to highlight the new components for which you developed stories.]
 e.g.
 
-![][i4]
+
 
 ## Caching.
 
@@ -120,7 +109,7 @@ e.g.
  + etc
 + etc
 
-![][i3]
+
 
 ## Authentication (if relevant).
 
@@ -152,5 +141,5 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [i7]: ./public/i7.png
 [i8]: ./public/i8.png
 [i9]: ./public/i9.png
-[i10]: ./public/i10.png
-[i11]: ./public/i11.png
+[ia]: ./public/i10.png
+[ib]: ./public/i11.png
