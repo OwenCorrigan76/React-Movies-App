@@ -83,6 +83,9 @@ Below is a list of the set of routes this app supports:
 
 <br/>
 
+### 9 Filter Tv Shows
+![][i10]
+
 [ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
 
 e.g.
