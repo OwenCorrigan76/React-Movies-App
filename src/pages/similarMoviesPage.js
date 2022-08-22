@@ -6,10 +6,12 @@ import Spinner from '../components/spinner';
 import { getSimilarMovies } from '../api/tmdb-api';
 import { getMovie } from '../api/tmdb-api';
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
+import { useParams } from 'react-router-dom';
 
-const SimilarMoviesPage = (props) => {
+const SimilarMoviesPage = () => {
+  const {id } = useParams();
   const { data, error, isLoading, isError } = useQuery(
-    'similar',
+   ['similar',{id: id}],
     getSimilarMovies,
     getMovie,
   );
@@ -28,7 +30,7 @@ console.log("THis is a ",  movie)
   return (
     <PageTemplate
       title='Similar Movies'
-      movie={movie}
+      movies={movie}
       action={(movie) => {
        return <AddToFavouritesIcon movie={movie} />;
       }}
