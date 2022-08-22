@@ -10,7 +10,7 @@ This app is a Movie App that features movie and Tv shows, details, reviews and a
 + Feature 2 - Popular Actors
 + Feature 3 - Tv Shows
 + Feature 4 - Top Rated Movies
-+ Feature 5 - Favourite Tv Shows
++ Feature 5 - Favourite Tv Shows / Add and Remove
 + Feature 6 - Actors Biography
 + Feature 7 - Updated Storybook
 + Feature 8 - Firebase Login / Authetication
