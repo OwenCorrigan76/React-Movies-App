@@ -46,26 +46,42 @@ Below is a list of the set of routes this app supports:
 + /tvShows/tv:/id - detailed information on a specific tv show.
 + /tvShows/favourites - list of favourite tv shows.
 
+<br/>
 
 ### Views/Pages.
 
-1 Tv Show Pages View
+### 1 Tv Show Pages View
 ![][i2]
-2 Tv Show Details Page
+<br/>
+
+### 2 Tv Show Details Page
 ![][i3]
-3 Tv Show Review Page
+<br/>
+
+### 3 Tv Show Review Page
 ![][i4]
-4 Favourite Tv Show Page
+<br/>
+
+### 4 Favourite Tv Show Page
 ![][i5]
-5 Top Rated Movies Page
+<br/>
+
+### 5 Top Rated Movies Page
 ![][i6]
-6 Popuar Actors Page 
+<br/>
+
+### 6 Popuar Actors Page 
 ![][i7]
-7 Actors Detail Page
+<br/>
+
+### 7 Actors Detail Page
 ![][i8]
-8 Similar Movies Page
+<br/>
+
+### 8 Similar Movies Page
 ![][i9]
 
+<br/>
 
 [ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
 
@@ -77,7 +93,7 @@ e.g.
 
 ![][i5]
 
-
+<br/>
 ### Component catalogue.
 
 [ Use the Storybook UI to highlight the new components for which you developed stories.]
