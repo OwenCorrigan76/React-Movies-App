@@ -68,7 +68,7 @@ e.g.
  + etc
 + etc
 
-![][Tv_Shows]
+![][tvshows]
 
 ## Authentication (if relevant).
 
@@ -92,7 +92,7 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
 [Ui]: ./public/1_Ui.png
-[Tv_Shows]: ./public/2_Tv_Shows.png
+[tvshow]: ./public/2_Tv_Shows.png
 [Tv_Show_Detaills]: ./public/3_Tv_Show_Details.png
 [Tv_Show_Review]: ./public/4_Tv_Show_Review.png
 [Tv_Show_Favourites]: ./public/5_Tv_Show_Favourites.png
