@@ -28,17 +28,44 @@ https://www.themoviedb.org/signup
 ## App Design.
 The app has been slightly modified to utilise some new css styling throughout. The colours of the pages have been modernised using bright and fresh clours. The layout is simple with each page being accesible from the site header nav bar.  
 
-![][UI]
+![][i1]
 ### Routing/Navigation.
 
 Below is a list of the set of routes this app supports:
 
++ "/" - home page with list of movies.
 + /movies/:id - detailed information on a specific movie.
 + /movies/upcoming - lists movies soon to be shown in cinemas.
-+ etc.
-+ etc.
++ /movies/favourites - list of favourite movies.
++ /movies/top_rated - list of top rated movies.
++ /movies/:id/similar - list of top similar movies.
++ /movies/top_rated - list of top rated movies.
++ /reviews/:id - review of specific selected movie.
++ /reviews/:form - add a review of specific selected movie.
++ /tvShows/tv - list of tv shows.
++ /tvShows/tv:/id - detailed information on a specific tv show.
++ /tvShows/favourites - list of favourite tv shows.
+
 
 ### Views/Pages.
+
+1 Tv Show Pages View
+![][i2]
+2 Tv Show Details Page
+![][i3]
+3 Tv Show Review Page
+![][i4]
+4 Favourite Tv Show Page
+![][i5]
+5 Top Rated Movies Page
+![][i6]
+6 Popuar Actors Page 
+![][i7]
+7 Actors Detail Page
+![][i8]
+8 Similar Movies Page
+![][i9]
+
 
 [ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
 

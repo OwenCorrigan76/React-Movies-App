@@ -45,25 +45,18 @@ const App = () => {
         <SiteHeader />
         <MoviesContextProvider>
           <TvShowsContextProvider>
-           
-          <Routes>
-            {/* <Route path="/" element={<Home />} />
+            <Routes>
+              {/* <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/reset" element={<Reset />} />
             <Route path="/dashboard" element={<Dashboard />} /> */}
-
-
+              <Route path="/movies/:id" element={<MoviePage />} />
               <Route
                 path="/movies/favourites"
                 element={<FavouriteMoviesPage />}
               />
-              <Route
-                path="/tvShows/favourites"
-                element={<FavouriteTvShowsPage />}
-              />
-
               <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
               <Route
                 path="/movies/:id/similar"
@@ -73,18 +66,21 @@ const App = () => {
                 path="/movies/top_rated"
                 element={<TopRatedMoviesPage />}
               />
-
-              <Route path="/tvShows/tv" element={<TvPage />} />
+              <Route path="/reviews/:id" element={<MovieReviewPage />} />
               <Route path="/reviews/form" element={<AddMovieReviewPage />} />
-              <Route path="/movies/:id" element={<MoviePage />} />
-              <Route path="/actors/:id" element={<ActorsPage />} />
+
+              <Route
+                path="/tvShows/favourites"
+                element={<FavouriteTvShowsPage />}
+              />
               <Route path="/tvShows/:id" element={<TvShowPage />} />
+              <Route path="/tvShows/tv" element={<TvPage />} />
+              <Route path="/actors/:id" element={<ActorsPage />} />
               <Route path="/person/popular" element={<PopularActorsPage />} />
               <Route path="/" element={<HomePage />} />
               {/*             <Route path="/" element={<LoginPage />} />
                */}
               <Route path="*" element={<Navigate to="/" replace />} />
-              <Route path="/reviews/:id" element={<MovieReviewPage />} />
             </Routes>
           </TvShowsContextProvider>
         </MoviesContextProvider>
