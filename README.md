@@ -28,6 +28,7 @@ https://www.themoviedb.org/signup
 ## App Design.
 The app has been slightly modified to utilise some new css styling throughout. The colours of the pages have been modernised using bright and fresh clours. The layout is simple with each page being accesible from the site header nav bar.  
 
+![][UI]
 ### Routing/Navigation.
 
 Below is a list of the set of routes this app supports:
@@ -44,9 +45,6 @@ Below is a list of the set of routes this app supports:
 e.g.
 >Lists movies from the Discover endpoint. Filtering on title and genre attributes is supported.
 
-![][d1]
-
-![][d2]
 
 >Shows detailed information on a specific movie
 
@@ -70,7 +68,7 @@ e.g.
  + etc
 + etc
 
-![][caching]
+![][Tv_Shows]
 
 ## Authentication (if relevant).
 
@@ -94,10 +92,10 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
 [Ui]: ./public/1_Ui.png
-[Tv Shows]: ./public/2_Tv_Shows.png
-[Tv Show Detaills]: ./public/3_Tv_Show_Details.png
-[Tv Show Review]: ./public/4_Tv_Show_Review.png
-[Tv Show Favourites]: ./public/5_Tv_Show_Favourites.png
-[Top Rated Movies]: ./public/6_Top_Rated_Movies.png
-[Popular Actors]: ./public/7_Popular_Actors.png
-[Actors Bio]: ./public/8_Actors_Biography.png
+[Tv_Shows]: ./public/2_Tv_Shows.png
+[Tv_Show_Detaills]: ./public/3_Tv_Show_Details.png
+[Tv_Show_Review]: ./public/4_Tv_Show_Review.png
+[Tv_Show_Favourites]: ./public/5_Tv_Show_Favourites.png
+[Top+Rated_Movies]: ./public/6_Top_Rated_Movies.png
+[Popular_Actors]: ./public/7_Popular_Actors.png
+[Actors_Bio]: ./public/8_Actors_Biography.png
