@@ -1,18 +1,7 @@
-/* import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Footer from "../siteFooter"
+import React from "react";
 
-const useStyles = makeStyles((theme) => ({}));
-
-const SiteFooter = (props) => {
-  const classes = useStyles();
-  <footer>
-    <p>Copyright {props.year}</p>
-  </footer>;
-
-return (
-     <Footer year={new Date().getFullYear()} />
-);
+const SiteFooter = () => {
+  return <div align="right"> Copyright @2022 Owen Corrigan </div>;
 };
 
-export default SiteFooter; */
+export default SiteFooter;

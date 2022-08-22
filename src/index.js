@@ -1,6 +1,7 @@
 // entry point to app
 import React from "react";
 import SiteHeader from "./components/siteHeader";
+import SiteFooter from "./components/siteFooter";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
@@ -21,13 +22,8 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import TvShowsContextProvider from "./contexts/tvShowsContext";
 import AddMovieReviewPage from "./pages/addMovieReviewPage";
 import AddTvReviewPage from "./pages/addTvReviewPage";
-/* import Home from "./pages/Home";
- import Login from "./pages/Login";
-import Logout from "./pages/Logout";
-import Register from "./pages/Register";
-import Reset from "./pages/Reset";
-import Dashboard from "./pages/Dashboard";
-import Navigation from "./components/nav/navigation"; */
+import AuthProvider from "./contexts/authContext";
+import ProtectedRoute from "./components/protectedRoute";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -47,12 +43,7 @@ const App = () => {
         <MoviesContextProvider>
           <TvShowsContextProvider>
             <Routes>
-              {/* <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/reset" element={<Reset />} />
-            <Route path="/dashboard" element={<Dashboard />} /> */}
+              <Route path="/" element={<HomePage />} />
               <Route path="/movies/:id" element={<MoviePage />} />
               <Route
                 path="/movies/favourites"
@@ -80,13 +71,14 @@ const App = () => {
 
               <Route path="/actors/:id" element={<ActorsPage />} />
               <Route path="/person/popular" element={<PopularActorsPage />} />
-              <Route path="/" element={<HomePage />} />
+             
               {/*             <Route path="/" element={<LoginPage />} />
                */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </TvShowsContextProvider>
         </MoviesContextProvider>
+        <SiteFooter />
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

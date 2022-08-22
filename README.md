@@ -16,6 +16,7 @@ This app is a Movie App that features movie and Tv shows, details, reviews and a
 + Feature 8 - Firebase Login / Authetication
 + Feature 9 - Updated UI
 + Feature 10 - Write Tv Show Review
++ Feature 11 - Caching
 
 
 
@@ -91,6 +92,10 @@ Below is a list of the set of routes this app supports:
 ![][ib]
 <br/>
 
+### 11 Tv Show Caching Example
+![][ic]
+<br/>
+
 
 ### Component catalogue.
 
@@ -143,3 +148,4 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [i9]: ./public/i9.png
 [ia]: ./public/i10.png
 [ib]: ./public/i11.png
+[ic]: ./public/ic.png
