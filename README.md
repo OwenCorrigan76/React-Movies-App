@@ -48,7 +48,7 @@ e.g.
 
 >Shows detailed information on a specific movie
 
-![][detail]
+![][i5]
 
 
 ### Component catalogue.
@@ -56,7 +56,7 @@ e.g.
 [ Use the Storybook UI to highlight the new components for which you developed stories.]
 e.g.
 
-![][stories]
+![][i4]
 
 ## Caching.
 
@@ -68,7 +68,7 @@ e.g.
  + etc
 + etc
 
-![][tvshows]
+![][i3]
 
 ## Authentication (if relevant).
 
@@ -91,11 +91,13 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
-[Ui]: ./public/1_Ui.png
-[tvshows]: ./public/2_Tv_Shows.png
-[Tv_Show_Detaills]: ./public/3_Tv_Show_Details.png
-[Tv_Show_Review]: ./public/4_Tv_Show_Review.png
-[Tv_Show_Favourites]: ./public/5_Tv_Show_Favourites.png
-[Top+Rated_Movies]: ./public/6_Top_Rated_Movies.png
-[Popular_Actors]: ./public/7_Popular_Actors.png
-[Actors_Bio]: ./public/8_Actors_Biography.png
+[i1]: ./public/i1.png
+[i2]: ./public/i2.png
+[i3]: ./public/i3.png
+[i4]: ./public/i4.png
+[i5]: ./public/i5.png
+[i6]: ./public/i6.png
+[i7]: ./public/i7.png
+[i8]: ./public/i8.png
+[i9]: ./public/i9.png
+
