@@ -107,7 +107,7 @@ Below is a list of the set of routes this app supports:
 
 ### Component catalogue.
 
-Below is the use of Storybook UI to highlight asmall amount of new components.
+Below is the use of Storybook UI to highlight a small amount of new components.
 
 <br/>
 
