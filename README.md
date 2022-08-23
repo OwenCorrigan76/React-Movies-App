@@ -13,7 +13,7 @@ This app is a Movie App that features movie and Tv shows, details, reviews and a
 + Feature 5 - Favourite Tv Shows / Add and Remove
 + Feature 6 - Actors Biography
 + Feature 7 - Updated Storybook
-+ Feature 8 - Firebase Login / Authetication
++ Feature 8 - Simple Login / Authetication
 + Feature 9 - Updated UI
 + Feature 10 - Write Tv Show Review
 + Feature 11 - Caching
@@ -47,6 +47,7 @@ Below is a list of the set of routes this app supports:
 + /tvShows/tv - list of tv shows.
 + /tvShows/tv:/id - detailed information on a specific tv show.
 + /tvShows/favourites - list of favourite tv shows.
++ /login - login page.
 
 <br/>
 
@@ -96,19 +97,21 @@ Below is a list of the set of routes this app supports:
 ![][ic]
 <br/>
 
+### 12 Simple Login Page
+![][if]
+<br/>
 
 ### Component catalogue.
 
 [ Use the Storybook UI to highlight the new components for which you developed stories.]
 e.g.
 
-
+<br/>
 
 ## Caching.
 
 Caching takes place with the pages listed below. The api request is only made once and the cache passes the request back to the page if the page is requested a subsequent time.
 
-![][ic]
 
 + Home Page
 + Movie details
@@ -123,23 +126,24 @@ Caching takes place with the pages listed below. The api request is only made on
 Below is an examples of caching over elements that have id's.
 
 ![][id]
+<br/>
 
 The cache can also be seen in action with the Query Details. The cache information has a life cycle of 6 minutes, as determined in the QueryClient.
 
 ![][ie]
+<br/>
 
 ## Authentication (if relevant).
 
-[Briefly state how you implemented authentication for the app, e.g. basic, Firebase, etc. Also, list the routes that are private/protected.]
+A basic login system is implemented using a fake autorization and iplementing protectedRoute. The page assosiated with a given route will not be given acceess until login button is clicked.
+Beow is a list of pages that are protected by login.
++ Home
++ Upcoming
++ Top Rated
++ Popular Actors
++ Tv Shows
 
-e.g.
-+ /reviews/:id
-+ /movies/favourites
-
-## Server-side persistence (if relevant)
-
-[ Specify the persistence 
-platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it persists.]
+<br/>
 
 ## Additional features (if relevant),
 
@@ -160,3 +164,4 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [ic]: ./public/ic.png
 [id]: ./public/id.png
 [ie]: ./public/ie.png
+[if]: ./public/if.png
