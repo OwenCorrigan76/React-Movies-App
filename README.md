@@ -107,8 +107,19 @@ Below is a list of the set of routes this app supports:
 
 ### Component catalogue.
 
-[ Use the Storybook UI to highlight the new components for which you developed stories.]
-e.g.
+Below is the use of Storybook UI to highlight asmall amount of new components.
+
+<br/>
+
++ FilterTvShow
++ TvPageHeader
++ TvCard
++ TvDetails
++ TvHeader
+
+<br/>
+
+![][ig]
 
 <br/>
 
@@ -137,10 +148,10 @@ The cache can also be seen in action with the Query Details. The cache informati
 ![][ie]
 <br/>
 
-## Authentication (if relevant).
+## Authentication.
 
 A basic login system is implemented using a fake autorization and iplementing protectedRoute. The page assosiated with a given route will not be given acceess until login button is clicked.
-Beow is a list of pages that are protected by login.
+Below is a list of pages that are protected by login.
 + Home
 + Upcoming
 + Top Rated
@@ -149,9 +160,6 @@ Beow is a list of pages that are protected by login.
 
 <br/>
 
-## Additional features (if relevant),
-
-[Mention any additional user features of your app that may not be obvious from the previous sections, e.g. pagination, extended filtering/sorting, searching.]
 
 
 [i1]: ./public/i1.png
@@ -169,3 +177,4 @@ Beow is a list of pages that are protected by login.
 [id]: ./public/id.png
 [ie]: ./public/ie.png
 [if]: ./public/if.png
+[ig]: ./public/ig.png
