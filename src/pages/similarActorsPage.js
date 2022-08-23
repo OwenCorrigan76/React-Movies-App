@@ -10,9 +10,9 @@ import { useParams } from 'react-router-dom';
 
 const SimilarMoviesPage = () => {
   const {id } = useParams();
-  const { data, error, isLoading, isError } = useQuery(
+  const { data, error, isLoading, isError } = useQuery( // caching over the id
    ['similar',{id: id}],
-    getSimilarMovies,
+    getSimilarMovies, 
     getMovie,
   );
 

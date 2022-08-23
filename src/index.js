@@ -3,7 +3,7 @@ import React from "react";
 import SiteHeader from "./components/siteHeader";
 import SiteFooter from "./components/siteFooter";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Navigate, Routes, Link } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import TvShowPage from "./pages/tvDetailsPage";
@@ -24,6 +24,7 @@ import AddMovieReviewPage from "./pages/addMovieReviewPage";
 import AddTvReviewPage from "./pages/addTvReviewPage";
 import AuthProvider from "./contexts/authContext";
 import ProtectedRoute from "./components/protectedRoute";
+import LoginPage from "./pages/loginPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,18 +61,16 @@ const App = () => {
               />
               <Route path="/reviews/:id" element={<MovieReviewPage />} />
               <Route path="/reviews/form" element={<AddMovieReviewPage />} />
-
               <Route
                 path="/tvShows/favourites"
                 element={<FavouriteTvShowsPage />}
               />
+              <Route path="/login" element={<LoginPage />} />
               <Route path="/tvShows/:id" element={<TvShowPage />} />
               <Route path="/tvShows/tv" element={<TvPage />} />
               <Route path="/reviewsTv/form" element={<AddTvReviewPage />} />
-
               <Route path="/actors/:id" element={<ActorsPage />} />
               <Route path="/person/popular" element={<PopularActorsPage />} />
-             
               {/*             <Route path="/" element={<LoginPage />} />
                */}
               <Route path="*" element={<Navigate to="/" replace />} />

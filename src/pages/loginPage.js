@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { AuthContext } from "./authContext";
+import { AuthContext } from "../contexts/authContext";
 
 const LoginPage = () => {
-  const {authenticate } = useContext(AuthContext);
+  const { authenticate } = useContext(AuthContext);
 
   const login = () => {
     const password = Math.random().toString(36).substring(7);

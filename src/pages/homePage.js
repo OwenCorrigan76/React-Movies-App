@@ -8,15 +8,17 @@ import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 const HomePage = (props) => {
   const {  data, error, isLoading, isError }  = useQuery(
     'discover', 
-    getMovies)
+    getMovies) // useQuery for caching
 
-  if (isLoading) {
+  if (isLoading) { // hopefully false
     return <Spinner />
   }
 
-  if (isError) {
+  if (isError) { // hopefully false 
     return <h1>{error.message}</h1>
   }  
+
+
   const movies = data.results;
 
   return (

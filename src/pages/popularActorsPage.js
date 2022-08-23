@@ -8,8 +8,8 @@ import Spinner from '../components/spinner';
 import { getActorImages } from '../api/tmdb-api';
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
-const PopularActorsPage = (props) => {
-  const { data, error, isLoading, isError } = useQuery(
+const PopularActorsPage = (props) => { 
+  const { data, error, isLoading, isError } = useQuery(// caching used 
     'actors',
     getPopularActors,
     getActorImages

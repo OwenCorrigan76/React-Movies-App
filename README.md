@@ -106,15 +106,27 @@ e.g.
 
 ## Caching.
 
-[ List the TMDB server state cached by the app. Include a screenshot(s) of the react-query dev tools to validate your list.]
+Caching takes place with the pages listed below. The api request is only made once and the cache passes the request back to the page if the page is requested a subsequent time.
 
-e.g.
-+ Discover movies (pagination support)
+![][ic]
+
++ Home Page
 + Movie details
- + etc
-+ etc
++ Upcoming Movies
++ Similar Movies
++ Popular Actors
++ Actord Details
++ Upcoming Movies
++ Tv Shows
++ Tv Shows Details
 
+Below is an examples of caching over elements that have id's.
 
+![][id]
+
+The cache can also be seen in action with the Query Details. The cache information has a life cycle of 6 minutes, as determined in the QueryClient.
+
+![][ie]
 
 ## Authentication (if relevant).
 
@@ -133,9 +145,6 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 
 [Mention any additional user features of your app that may not be obvious from the previous sections, e.g. pagination, extended filtering/sorting, searching.]
 
-## Independent learning (if relevant),
-
-[Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
 [i1]: ./public/i1.png
 [i2]: ./public/i2.png
@@ -149,3 +158,5 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [ia]: ./public/i10.png
 [ib]: ./public/i11.png
 [ic]: ./public/ic.png
+[id]: ./public/id.png
+[ie]: ./public/ie.png

@@ -44,6 +44,7 @@ const SiteHeader = () => {
 
   const open = Boolean(anchorEl);
   const menuOptions = [
+
     { label: "Home", path: "/homePage" },
     { label: "Favourites", path: "/movies/favourites" },
     { label: "Favourites Tv", path: "/tvShows/favourites" },
@@ -51,6 +52,7 @@ const SiteHeader = () => {
     { label: "Top Rated", path: "/movies/top_rated" },
     { label: "Popular Actors", path: "/person/popular" },
     { label: "Tv Shows", path: "/tvShows/tv" },
+    { label: "Login", path: "/login" },
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -63,6 +65,7 @@ const SiteHeader = () => {
 
   return (
     <>
+    
       <AppBar
         className={classes.appbar}
         position="fixed"
