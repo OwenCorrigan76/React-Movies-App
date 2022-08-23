@@ -5,7 +5,7 @@ import { AuthContext } from "../../contexts/authContext";
 const ProtectedRoute = ({ children }) => {
   const { token } = useContext(AuthContext);
   const location = useLocation();
-  console.log(location)
+  console.log(location);
   if (!token) {
     return <Navigate to={"/login"} replace state={{ intent: location }} />;
   }

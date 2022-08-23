@@ -4,7 +4,9 @@ import PageTemplate from "../components/templateTvPage";
 import TvReview from "../components/tvReview";
 
 const TvReviewPage = (props) => {
-  const { state : {tv, review } } = useLocation()
+  const {
+    state: { tv, review },
+  } = useLocation();
   return (
     <PageTemplate tv={tv}>
       <TvReview review={review} />

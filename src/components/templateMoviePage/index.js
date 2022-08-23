@@ -65,7 +65,6 @@ const TemplateMoviePage = ({ movie, children }) => {
           <Grid item xs={9}>
             {children}
           </Grid>
-         
         </Grid>
       </div>
     </>

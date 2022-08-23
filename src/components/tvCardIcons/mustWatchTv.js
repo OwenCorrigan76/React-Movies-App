@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 import { TvShowsContext } from "../../contexts/tvShowsContext";
 import IconButton from "@material-ui/core/IconButton";
-import PlaylistIcon  from "@material-ui/icons/PlaylistAdd";
+import PlaylistIcon from "@material-ui/icons/PlaylistAdd";
 
 const AddToMustWatchTv = ({ tv }) => {
   const context = useContext(TvShowsContext);
@@ -11,7 +11,7 @@ const AddToMustWatchTv = ({ tv }) => {
   const handleAddToMustWatchTv = (e) => {
     e.preventDefault();
     context.addToMustWatch(tv);
-    console.log(tv)
+    console.log(tv);
   };
 
   return (

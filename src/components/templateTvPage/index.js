@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
 
 const TemplateTvPage = ({ tv, children }) => {
   const classes = useStyles();
-  const {  error, isLoading, isError } = useQuery(
-     ["images", { id: tv.id }],
-    getTvImages 
-      );
+  const { error, isLoading, isError } = useQuery(
+    ["images", { id: tv.id }],
+    getTvImages
+  );
 
   if (isLoading) {
     return <Spinner />;
@@ -40,7 +40,6 @@ const TemplateTvPage = ({ tv, children }) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-   // const images = data.posters;
 
   return (
     <>

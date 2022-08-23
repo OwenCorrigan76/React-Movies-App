@@ -1,14 +1,14 @@
 // spinner while waiting for page to load
 
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
     justifyContent: "center",
-    '& > * + *': {
+    "& > * + *": {
       marginLeft: theme.spacing(2),
     },
   },

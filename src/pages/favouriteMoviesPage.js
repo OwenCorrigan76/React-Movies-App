@@ -19,7 +19,7 @@ const FavouriteMoviesPage = () => {
       };
     })
   );
-  
+
   const isLoading = favouriteMovieQueries.find((m) => m.isLoading === true);
 
   if (isLoading) {
@@ -30,7 +30,7 @@ const FavouriteMoviesPage = () => {
     q.data.genre_ids = q.data.genres.map((g) => g.id);
     return q.data;
   });
-  
+
   return (
     <PageTemplate
       title="Favourite Movies"

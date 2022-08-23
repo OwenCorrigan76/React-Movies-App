@@ -7,12 +7,14 @@ import { getTv } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
 
 const WriteTvReviewPage = (props) => {
-  const location = useLocation()
+  const location = useLocation();
   const { tvId } = location.state;
-  const { data: tv, error, isLoading, isError } = useQuery(
-    ["tv", { id: tvId }],
-    getTv
-  );
+  const {
+    data: tv,
+    error,
+    isLoading,
+    isError,
+  } = useQuery(["tv", { id: tvId }], getTv);
 
   if (isLoading) {
     return <Spinner />;

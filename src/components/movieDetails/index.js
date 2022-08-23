@@ -59,14 +59,12 @@ const MovieDetails = ({ movie }) => {
     getSimilarMovies(movie.id).then((movie) => {
       setSimilar(movie);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     getActor(actor.id).then((actor) => {
       setActor(actor);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -74,7 +72,6 @@ const MovieDetails = ({ movie }) => {
       console.log("This is similar", similar);
       setSimilar(similar);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -121,22 +118,7 @@ const MovieDetails = ({ movie }) => {
         onClick={() => setDrawerOpen(true)}
         className={classes.fab}
       >
-        <Link
-          to={`/movies/${movie.id}/similar`}
-        >
-         
-            Similar Movies
-     
-        </Link>
-        {/* <CardActions disableSpacing>
-      </CardActions>
-        <Link to={`/actor/${movie.id}/${actor.id}`}>
-          <Button variant="contained" size="medium" color="primary">
-            Actor Biography
-          </Button>
-        </Link>
-        <CardActions disableSpacing>
-      </CardActions> */}
+        <Link to={`/movies/${movie.id}/similar`}>Similar Movies</Link>
         <NavigationIcon />
         Click for Reviews
       </Fab>

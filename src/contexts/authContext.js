@@ -15,10 +15,10 @@ const AuthContextProvider = ({ children }) => {
     const origin = location.state?.intent?.pathname || "/";
     navigate(origin);
   };
-  
+
   const signout = () => {
     setToken(null);
-    navigate('/')
+    navigate("/");
   };
 
   return (

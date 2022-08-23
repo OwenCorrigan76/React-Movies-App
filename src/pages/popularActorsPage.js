@@ -1,16 +1,17 @@
 // Main page for popular actors
 
-import React from 'react';
-import PageTemplate from '../components/templateActorListPage';
-import { getPopularActors } from '../api/tmdb-api';
-import { useQuery } from 'react-query';
-import Spinner from '../components/spinner';
-import { getActorImages } from '../api/tmdb-api';
-import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
+import React from "react";
+import PageTemplate from "../components/templateActorListPage";
+import { getPopularActors } from "../api/tmdb-api";
+import { useQuery } from "react-query";
+import Spinner from "../components/spinner";
+import { getActorImages } from "../api/tmdb-api";
+import AddToFavouritesIcon from "../components/cardIcons/addToFavourites";
 
-const PopularActorsPage = (props) => { 
-  const { data, error, isLoading, isError } = useQuery(// caching used 
-    'actors',
+const PopularActorsPage = (props) => {
+  const { data, error, isLoading, isError } = useQuery(
+    // caching used
+    "actors",
     getPopularActors,
     getActorImages
   );
@@ -24,10 +25,10 @@ const PopularActorsPage = (props) => {
   }
 
   const actor = data.results;
-   console.log("List of actors" , actor)
+  console.log("List of actors", actor);
   return (
     <PageTemplate
-      title='Popular Actors'
+      title="Popular Actors"
       actor={actor}
       action={(actor) => {
         return <AddToFavouritesIcon actors={actor} />;

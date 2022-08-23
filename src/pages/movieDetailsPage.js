@@ -6,7 +6,8 @@ import { getMovie } from "../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
 
-const MovieDetailsPage = () => { // more detailed caching caching 
+const MovieDetailsPage = () => {
+  // more detailed caching caching
   const { id } = useParams();
   const {
     data: movie,

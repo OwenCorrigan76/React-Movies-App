@@ -1,6 +1,6 @@
-import React from 'react';
-import Actor from '../actorCard';
-import Grid from '@material-ui/core/Grid';
+import React from "react";
+import Actor from "../actorCard";
+import Grid from "@material-ui/core/Grid";
 
 const ActorList = ({ actor, action }) => {
   let actorCards = actor.map((m) => (

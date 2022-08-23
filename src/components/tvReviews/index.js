@@ -1,6 +1,6 @@
 // how content of moview review is displayed
 
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -27,7 +27,6 @@ export default function TvShowReviews({ tv }) {
     getTvShowReviews(tv.id).then((reviews) => {
       setReviews(reviews);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -35,7 +34,7 @@ export default function TvShowReviews({ tv }) {
       <Table className={classes.table} aria-label="reviews table">
         <TableHead>
           <TableRow>
-            <TableCell >Author</TableCell>
+            <TableCell>Author</TableCell>
             <TableCell align="center">Excerpt</TableCell>
             <TableCell align="right">More</TableCell>
           </TableRow>
@@ -46,8 +45,8 @@ export default function TvShowReviews({ tv }) {
               <TableCell component="th" scope="row">
                 {r.author}
               </TableCell>
-              <TableCell >{excerpt(r.content)}</TableCell>
-              <TableCell >
+              <TableCell>{excerpt(r.content)}</TableCell>
+              <TableCell>
                 <Link
                   to={`/reviews/${r.id}`}
                   state={{

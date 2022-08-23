@@ -1,22 +1,22 @@
 // template page with background and filter included
 
-import React, { useState } from 'react';
-import Header from '../headerMovieList';
-import FilterCard from '../filterMoviesCard';
-import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import Drawer from '@material-ui/core/Drawer';
-import { makeStyles } from '@material-ui/core/styles';
-import ActorList from '../actorList';
+import React, { useState } from "react";
+import Header from "../headerMovieList";
+import FilterCard from "../filterMoviesCard";
+import Grid from "@material-ui/core/Grid";
+import Fab from "@material-ui/core/Fab";
+import Drawer from "@material-ui/core/Drawer";
+import { makeStyles } from "@material-ui/core/styles";
+import ActorList from "../actorList";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'purple',
+    backgroundColor: "purple",
     paddingTop: theme.spacing(7),
   },
   fab: {
     marginTop: theme.spacing(8),
-    position: 'fixed',
+    position: "fixed",
     top: theme.spacing(2),
     right: theme.spacing(2),
   },
@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
 
 function ActorListPageTemplate({ actor, title, action }) {
   const classes = useStyles();
-  const [titleFilter, setTitleFilter] = useState('');
-  const [genreFilter, setGenreFilter] = useState('0');
+  const [titleFilter, setTitleFilter] = useState("");
+  const [genreFilter, setGenreFilter] = useState("0");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const genreId = Number(genreFilter);
@@ -39,7 +39,7 @@ function ActorListPageTemplate({ actor, title, action }) {
     });
 
   const handleChange = (type, value) => {
-    if (type === 'title') setTitleFilter(value);
+    if (type === "title") setTitleFilter(value);
     else setGenreFilter(value);
   };
 
@@ -53,25 +53,6 @@ function ActorListPageTemplate({ actor, title, action }) {
           <ActorList action={action} actor={displayedActors} />
         </Grid>
       </Grid>
-      <Fab
-        color='secondary'
-        variant='extended'
-        onClick={() => setDrawerOpen(true)}
-        className={classes.fab}
-      >
-        Filter
-      </Fab>
-      <Drawer
-        anchor='left'
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      >
-        <FilterCard
-          onUserInput={handleChange}
-          titleFilter={titleFilter}
-          genreFilter={genreFilter}
-        />
-      </Drawer>
     </>
   );
 }

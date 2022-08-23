@@ -22,11 +22,15 @@ This app is a Movie App that features movie and Tv shows, details, reviews and a
 
 ## Setup requirements.
 To run the program, firstly pull from the git repository shown above. Once the repo is on a local machine, open the program in an IDE. This program will be run using Node.js. The packages and dependencies can be retrieved by running npm install. A .env file must be introduced with the following information:
-REACT_APP_TMDB_KEY=<<api key>>
+REACT_APP_TMDB_KEY=insert api key here 
+<br/>
 FAST_REFRESH=false To run the program, type npm start.
+<br/>
 The api key can be retireved when the user signs up to the TMDB api. This can be done by following this link:
+<br/>
 https://www.themoviedb.org/signup
 
+<br/>
 ## App Design.
 The app has been slightly modified to utilise some new css styling throughout. The colours of the pages have been modernised using bright and fresh clours. The layout is simple with each page being accesible from the site header nav bar.  
 

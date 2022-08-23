@@ -32,19 +32,19 @@ export default function TvCard({ tv, action }) {
   } else {
     tv.favourite = false;
   }
-  
+
   return (
     <Card className={classes.card}>
       <CardHeader
         className={classes.header}
-         avatar={
+        avatar={
           tv.favourite ? (
             <Avatar className={classes.avatar}>
               <FavoriteIcon />
             </Avatar>
           ) : null
-        } 
-                title={
+        }
+        title={
           <Typography variant="h5" component="p">
             {tv.name}{" "}
           </Typography>
@@ -62,7 +62,7 @@ export default function TvCard({ tv, action }) {
         <Grid container>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
-               {" Popularity "} {tv.popularity}
+              {" Popularity "} {tv.popularity}
             </Typography>
             <Grid item xs={6}>
               <Typography variant="h6" component="p">
@@ -74,7 +74,7 @@ export default function TvCard({ tv, action }) {
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
-      {action(tv)}
+        {action(tv)}
         <Link to={`/tvShows/${tv.id}`}>
           <Button variant="contained" size="medium" color="primary">
             TV Show Info

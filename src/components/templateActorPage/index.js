@@ -1,35 +1,35 @@
-import React from 'react';
-import ActorHeader from '../headerActor';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import { getActorImages } from '../../api/tmdb-api';
-import { useQuery } from 'react-query';
-import Spinner from '../spinner';
+import React from "react";
+import ActorHeader from "../headerActor";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import ImageList from "@material-ui/core/ImageList";
+import ImageListItem from "@material-ui/core/ImageListItem";
+import { getActorImages } from "../../api/tmdb-api";
+import { useQuery } from "react-query";
+import Spinner from "../spinner";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     paddingTop: theme.spacing(7),
     color: "black",
     margin: 0,
   },
   imageListRoot: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
   },
   imageList: {
     width: 450,
-    height: '100vh',
+    height: "100vh",
   },
 }));
 
 const TemplateActorPage = ({ actor, children }) => {
   const classes = useStyles();
   const { data, error, isLoading, isError } = useQuery(
-    ['images', { id: actor.id }],
+    ["images", { id: actor.id }],
     getActorImages
   );
   // console.log(actor.id);
@@ -47,7 +47,7 @@ const TemplateActorPage = ({ actor, children }) => {
   return (
     <div className={classes.root}>
       <ActorHeader actor={actor} />
-      <Grid container spacing={5} style={{ padding: '15px' }}>
+      <Grid container spacing={5} style={{ padding: "15px" }}>
         <Grid item xs={3}>
           <div className={classes.imageListRoot}>
             <ImageList rowHeight={500} className={classes.gridList} cols={1}>

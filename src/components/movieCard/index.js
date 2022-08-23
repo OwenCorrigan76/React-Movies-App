@@ -17,7 +17,6 @@ import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 
-
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,

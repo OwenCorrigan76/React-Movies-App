@@ -27,8 +27,8 @@ import ProtectedRoute from "./components/protectedRoute";
 import LoginPage from "./pages/loginPage";
 // import LogoutPage from "./pages/logoutPage";
 
-
-const queryClient = new QueryClient({ // for caching
+const queryClient = new QueryClient({
+  // for caching
   defaultOptions: {
     queries: {
       staleTime: 360000,
@@ -42,46 +42,78 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-      <AuthProvider>
-        <SiteHeader />
-        <MoviesContextProvider>
-          <TvShowsContextProvider>
-            <Routes>
-              <Route path="/" element={<ProtectedRoute><HomePage /></ProtectedRoute>}/>
-              <Route path="/movies/:id" element={<MoviePage />} />
-              <Route
-                path="/movies/favourites"
-                element={<FavouriteMoviesPage />}
-              />
-              <Route path="/movies/upcoming" element={<ProtectedRoute><UpcomingMoviesPage /></ProtectedRoute>}/>
-              <Route
-                path="/movies/:id/similar"
-                element={<SimilarMoviesPage />}
-              />
-              <Route
-                path="/movies/top_rated"
-                element={<TopRatedMoviesPage />}
-              />
-              <Route path="/reviews/:id" element={<MovieReviewPage />} />
-              <Route path="/reviews/form" element={<AddMovieReviewPage />} />
-              <Route
-                path="/tvShows/favourites"
-                element={<FavouriteTvShowsPage />}
-              />
-              <Route path="/login" element={<LoginPage />} />
-{/*               <Route path="/logout" element={<LogoutPage />} /> */}
-              <Route path="/tvShows/:id" element={<TvShowPage />} />
-              <Route path="/tvShows/tv" element={<ProtectedRoute><TvPage /></ProtectedRoute>} />
-              <Route path="/reviewsTv/form" element={<AddTvReviewPage />} />
-              <Route path="/actors/:id" element={<ActorsPage />} />
-              <Route path="/person/popular" element={<ProtectedRoute><PopularActorsPage /></ProtectedRoute>} />
-              {/*             <Route path="/" element={<LoginPage />} />
-               */}
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </TvShowsContextProvider>
-        </MoviesContextProvider>
-        <SiteFooter />
+        <AuthProvider>
+          <SiteHeader />
+          <MoviesContextProvider>
+            <TvShowsContextProvider>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <ProtectedRoute>
+                      <HomePage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="/movies/:id" element={<MoviePage />} />
+                <Route
+                  path="/movies/favourites"
+                  element={<FavouriteMoviesPage />}
+                />
+                <Route
+                  path="/movies/upcoming"
+                  element={
+                    <ProtectedRoute>
+                      <UpcomingMoviesPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/movies/:id/similar"
+                  element={<SimilarMoviesPage />}
+                />
+                <Route
+                  path="/movies/top_rated"
+                  element={
+                    <ProtectedRoute>
+                      <TopRatedMoviesPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="/reviews/:id" element={<MovieReviewPage />} />
+                <Route path="/reviews/form" element={<AddMovieReviewPage />} />
+                <Route
+                  path="/tvShows/favourites"
+                  element={<FavouriteTvShowsPage />}
+                />
+                <Route path="/login" element={<LoginPage />} />
+                {/*               <Route path="/logout" element={<LogoutPage />} /> */}
+                <Route path="/tvShows/:id" element={<TvShowPage />} />
+                <Route
+                  path="/tvShows/tv"
+                  element={
+                    <ProtectedRoute>
+                      <TvPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="/reviewsTv/form" element={<AddTvReviewPage />} />
+                <Route path="/actors/:id" element={<ActorsPage />} />
+                <Route
+                  path="/person/popular"
+                  element={
+                    <ProtectedRoute>
+                      <PopularActorsPage />
+                    </ProtectedRoute>
+                  }
+                />
+                {/*             <Route path="/" element={<LoginPage />} />
+                 */}
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </TvShowsContextProvider>
+          </MoviesContextProvider>
+          <SiteFooter />
         </AuthProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />

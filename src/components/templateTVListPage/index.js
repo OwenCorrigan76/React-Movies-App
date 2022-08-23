@@ -69,7 +69,6 @@ function TvListPageTemplate({ tvShows, title, action }) {
           titleFilter={titleFilter}
           genreFilter={genreFilter}
         />
-        
       </Drawer>
     </>
   );
