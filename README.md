@@ -1,5 +1,5 @@
 
-# ICT Skills 2 Assignment.
+# ICT Skills React Assignment.
 
 Name: Owen Corrigan
 GitHub Reopsitory - https://github.com/OwenCorrigan76/assignment-ict2
